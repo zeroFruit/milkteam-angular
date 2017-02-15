@@ -27,9 +27,11 @@
     "@angular/platform-browser-dynamic": "^2.4.7",
     "@angular/router": "^3.4.7",
     "@types/jquery": "*",
+    "@types/youtube": "0.0.28",
     "core-js": "*",
     "intl": "*",
     "rxjs": "*",
+    "typings": "^2.1.0",
     "zone.js": "*"
   },
   "devDependencies": {
@@ -50,6 +52,7 @@
     "file-loader": "^0.10.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.26.0",
+    "ng2-youtube-player": "0.0.1",
     "node-sass": "^4.4.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",

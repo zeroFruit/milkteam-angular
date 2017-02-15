@@ -1,0 +1,21 @@
+<div class="wrapper-player">
+  <div class="wrapper-youtube">
+    <youtube-player
+      [videoId]="id"
+      [width]="700"
+      [height]="394"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+      (playing)="onGetCurrentTime($event)"
+    ></youtube-player>
+  </div>
+  <div class="player-cover" (click)="onClickedCover()"></div>
+  <div class="wrapper-progress-bar">
+    <div class="progress-bar" id="progress-bar" (click)="onClickedBar($event)">
+      <div class="ing" [ngStyle]="{'width': play_rate+'%'}">
+        <div class="btn-ing" (click)="onClickedIng()"></div>
+      </div>
+      <div class="loading" [ngStyle]="{'width': load_rate+'%'}"></div>
+    </div>
+  </div>
+</div>
