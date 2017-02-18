@@ -2,6 +2,5 @@
   "name": "milkteam",
   "dependencies": {},
   "globalDependencies": {
-    "youtube": "registry:dt/youtube#0.0.0+20161119044246"
   }
 }
