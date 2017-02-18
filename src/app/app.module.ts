@@ -12,6 +12,8 @@ import { BattleVideoComponent } from './battle-video/battle-video.component';
 import { BattleChatingComponent } from './battle-video/battle-chating/battle-chating.component';
 import { BattleChatMessageComponent } from './battle-video/battle-chating/battle-chat-message/battle-chat-message.component';
 import { VideoComponent } from './video/video.component';
+import { CustomcardComponent } from './customcard/customcard.component';
+
 
 @NgModule({
     imports: [
@@ -23,7 +25,8 @@ import { VideoComponent } from './video/video.component';
         BattleVideoComponent,
         BattleChatingComponent,
         BattleChatMessageComponent,
-        VideoComponent
+        VideoComponent,
+        CustomcardComponent
     ],
     exports: [
         AppComponent,
