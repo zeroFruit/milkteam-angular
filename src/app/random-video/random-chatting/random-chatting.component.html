@@ -1,0 +1,14 @@
+<div class="random-chatting">
+  <div class="chatting-list">
+    <div class="chatting" *ngFor="let chatting of chattings">
+      <div class="wrapper-picture" [ngStyle]="{'background-image': 'url('+chatting.picture+')'}"></div>
+      <div class="wrapper-content">
+        <div class="nickname">{{ chatting.nickname }}</div>
+        <div class="message">{{ chatting.message }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="input-chatting">
+
+  </div>
+</div>

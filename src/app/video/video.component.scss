@@ -1,63 +1,79 @@
 // component css goes here
-.wrapper-player{
+.wrapper-player {
   display: inline-block;
   position: relative;
-}
-
-.player-cover{
-  background-color: rgba(158, 158, 164, 0.2);
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-}
+  .wrapper-youtube {
+    width: 100%;
+    height: 100%;
+  }
 
-.wrapper-progress-bar{
-  cursor: pointer;
-  height: 8px;
-  padding: 8px 0;
-  position: absolute;
-  width: 80%;
-  left:0;
-  right:0;
-  bottom: 8%;
-  margin-left:auto;
-  margin-right:auto;
-}
+  .player-cover {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
 
-.progress-bar{
-  background-color: black;
-  border-radius: 4px;
-  cursor: pointer;
-  position: relative;
-  height: 100%;
-}
+  .black-gradient {
+    background: -webkit-radial-gradient(rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.8) 80%); /* Safari 5.1-6.0 */
+    background: -o-radial-gradient(rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.8) 80%); /* For Opera 11.6-12.0 */
+    background: -moz-radial-gradient(rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.8) 80%); /* For Firefox 3.6-15 */
+    background: radial-gradient(rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.8) 80%); /* Standard */
+    -webkit-transition: background-color 5s ease;
+    -ms-transition: background-color 5s ease;
+    transition: background-color 5s ease;
+  }
 
-.ing{
-  background-color: #4369ff;
-  border-radius: 4px;
-  height: 100%;
-  width: 45%;
-  position: absolute;
-  z-index: 100;
-}
+  .wrapper-progress-bar {
+    cursor: pointer;
+    height: 8px;
+    padding: 8px 0;
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    bottom: 6%;
+    margin-left: auto;
+    margin-right: auto;
 
-.btn-ing{
-  background-color: #4369ff;
-  border: 3px solid white;
-  border-radius: 50%;
-  height: 12px;
-  margin: -5px -8px 0 0;
-  position: absolute;
-  right: 0;
-  width: 12px;
-  z-index: 200;
-}
+    .progress-bar {
+      background-color: black;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      height: 100%;
+    }
 
-.loading{
-  background-color: #9b9b9b;
-  border-radius: 4px;
-  height: 100%;
-  width: 45%;
-  position: absolute;
+    .ing {
+      background-color: #4369ff;
+      border-radius: 4px;
+      height: 100%;
+      width: 45%;
+      position: absolute;
+      z-index: 100;
+
+      .btn-ing {
+        background-color: #4369ff;
+        border: 3px solid white;
+        border-radius: 50%;
+        height: 12px;
+        margin: -5px -8px 0 0;
+        position: absolute;
+        right: 0;
+        width: 12px;
+        z-index: 200;
+      }
+    }
+
+    .loading {
+      background-color: #9b9b9b;
+      border-radius: 4px;
+      height: 100%;
+      width: 45%;
+      position: absolute;
+    }
+  }
 }

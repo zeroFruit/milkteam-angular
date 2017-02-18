@@ -30,6 +30,7 @@
     "@types/youtube": "0.0.28",
     "core-js": "*",
     "intl": "*",
+    "ng2-youtube-player": "0.0.1",
     "rxjs": "*",
     "typings": "^2.1.0",
     "zone.js": "*"
