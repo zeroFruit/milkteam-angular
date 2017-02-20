@@ -35,6 +35,9 @@ import { RandomChattingComponent } from "./random-video/random-chatting/random-c
       }, {
         path: 'filter',
         component: CustomcardComponent
+      }, {
+        path: '',
+        component: RandomVideoComponent
       }
     ])
   ],
