@@ -1,13 +1,49 @@
 // component css goes here
-.button_board_profile_image{float:left;margin-top:50px;}
-.user_id{  float:left; height: 17px;  width:120px;font-family: SpoqaHanSans;  font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: normal;  letter-spacing: normal;  color: #fd3d8a;  margin-left:32px;}
-.text-box{  float:left; display: inline-block; border-radius: 30px 30px 30px 0px;margin-top:8px;margin-left:12px;width: 236px;  height: 84px;  background-color: rgba(236, 236, 236, 0.12);}
-.time {  float:left; margin-top:79px; height: 13px;  font-family: SpoqaHanSans;  font-size: 11px;  font-weight: normal;  font-style: normal;  font-stretch: normal;  line-height: normal;  letter-spacing: normal;  text-align: left;  color: #c1c1c1;}
-.one-message {float:left;margin-top:15px;}
+.one-message {margin-top:15px;}
+.user_id{  height: 17px;  width:120px;font-family: SpoqaHanSans;  font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: normal;  letter-spacing: normal;  color: #fd3d8a;}
+.ui2 {margin-right:20px;color:#4a4a4a;}
+.mw2 {text-align: right;}
+.button_board_profile_image2{vertical-align: bottom;width:18%;}
+.one-message {font-size:0px;}
+.button_board_profile_image{vertical-align: bottom;width:100%;}
+.msg-profile{width:20%;display:inline-block;vertical-align:bottom;}
+.msg-ballon{width:55%;display:inline-block;font-size:5px;color:white;vertical-align:top;}
+.msg-time{width:25%;display:inline-block;font-size:5px;vertical-align:bottom;color:#c1c1c1;}
+.mb2 {text-align: right;}
+.text-box{margin-top:8px;min-height:51px;min-width:60%;max-width: 100%; }
+.tb1{border-radius: 30px 30px 30px 0px;background-color: rgba(236, 236, 236, 0.12);}
+.tb2{border-radius: 30px 30px 0px 30px;background-color: #a4a4a4;color:#222222;}
 
-.button_board_profile_image2{float:right;margin-top:50px;}
-.user_id2{  float:right; height: 17px;  width:120px;font-family: SpoqaHanSans;  font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: normal;  letter-spacing: normal;  color: #fd3d8a;  margin-right:32px; text-align: right;}
-.text-box2{  float:right; display: inline-block; border-radius: 30px 30px 0px 30px;margin-top:8px;margin-right:12px;width: 236px;  height: 84px;  background-color: #a4a4a4;}
-.time2 {  float:right; margin-top:79px; height: 13px;  font-family: SpoqaHanSans;  font-size: 11px;  font-weight: normal;  font-style: normal;  font-stretch: normal;  line-height: normal;  letter-spacing: normal;  text-align: left;  color: #c1c1c1;}
-.texts_left{position:relative;top:12px;left:20px;color:#fff;}
-.texts_right{position:relative;top:12px;left:20px;color:#222222;}
+
+
+
+.scrollbar
+{
+	height: 70%;
+	width: 100%;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 100%inherit;;
+}
+
+.style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+
+.style-1::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+.style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
