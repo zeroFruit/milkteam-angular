@@ -1,3 +1,6 @@
+/**
+ * Created by hackurity on 2017. 2. 21..
+ */
 import { Component } from '@angular/core';
 import { AuthService } from "../auth.service";
 

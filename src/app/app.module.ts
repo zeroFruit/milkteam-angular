@@ -25,6 +25,7 @@ import { JoinComponent } from "./auth/join/join.component";
 import { FindPwComponent } from "./auth/find-pw/find-pw.component";
 import { AuthService } from "./auth/auth.service";
 import { HttpModule } from "@angular/http";
+import { UploadComponent } from "./upload/upload.component";
 
 @NgModule({
   imports     : [
@@ -51,6 +52,9 @@ import { HttpModule } from "@angular/http";
       }, {
         path     : 'auth',
         component: AuthComponent
+      }, {
+        path     : 'upload',
+        component: UploadComponent
       }
     ])
   ],
@@ -74,7 +78,10 @@ import { HttpModule } from "@angular/http";
     AuthComponent,
     LoginComponent,
     JoinComponent,
-    FindPwComponent
+    FindPwComponent,
+
+    //Upload
+    UploadComponent
   ],
   exports     : [
     AppComponent,
