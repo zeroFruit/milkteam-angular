@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
-
+import { CommonModule} from '@angular/common';
+import { FormsModule } from '@angular/forms';
 // 유튜브모듈
 import { YoutubePlayerModule } from 'ng2-youtube-player';
 // Angular Imports
@@ -17,10 +18,16 @@ import { VideoComponent } from './video/video.component';
 import { CustomcardComponent } from './customcard/customcard.component';
 import { RandomInfoComponent } from "./random-video/random-info/random-info.component";
 import { RandomChattingComponent } from "./random-video/random-chatting/random-chatting.component";
+import { UploadComponent } from './upload/upload.component';
+
+// Import Pipe
+import { ChampionPipe } from './champion/champion.pipe';
 
 @NgModule({
   imports     : [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     YoutubePlayerModule,
     RouterModule.forRoot([
       {
@@ -51,7 +58,9 @@ import { RandomChattingComponent } from "./random-video/random-chatting/random-c
     RandomVideoComponent,
     RandomInfoComponent,
     RandomChattingComponent,
-    CustomcardComponent
+    CustomcardComponent,
+    UploadComponent,
+    ChampionPipe
   ],
   exports     : [
     AppComponent,
