@@ -17,29 +17,46 @@ import { VideoComponent } from './video/video.component';
 import { CustomcardComponent } from './customcard/customcard.component';
 import { RandomInfoComponent } from "./random-video/random-info/random-info.component";
 import { RandomChattingComponent } from "./random-video/random-chatting/random-chatting.component";
+import { RandomVideoService } from "./random-video/random-video.service";
+import { FormsModule } from "@angular/forms";
+import { AuthComponent } from "./auth/auth.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { JoinComponent } from "./auth/join/join.component";
+import { FindPwComponent } from "./auth/find-pw/find-pw.component";
+import { AuthService } from "./auth/auth.service";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   imports     : [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     YoutubePlayerModule,
     RouterModule.forRoot([
       {
-        path: 'main',
+        path     : 'main',
         component: RandomVideoComponent
       }, {
-        path: 'battle',
+        path     : 'battle',
         component: BattleVideoComponent
       }, {
-        path: 'video',
+        path     : 'video',
         component: VideoComponent
       }, {
-        path: 'filter',
+        path     : 'filter',
         component: CustomcardComponent
       }, {
-        path: '',
+        path     : '',
         component: RandomVideoComponent
+      }, {
+        path     : 'auth',
+        component: AuthComponent
       }
     ])
+  ],
+  providers   : [
+    RandomVideoService,
+    AuthService
   ],
   declarations: [
     AppComponent,
@@ -51,7 +68,13 @@ import { RandomChattingComponent } from "./random-video/random-chatting/random-c
     RandomVideoComponent,
     RandomInfoComponent,
     RandomChattingComponent,
-    CustomcardComponent
+    CustomcardComponent,
+
+    //Auth
+    AuthComponent,
+    LoginComponent,
+    JoinComponent,
+    FindPwComponent
   ],
   exports     : [
     AppComponent,
