@@ -17,6 +17,7 @@ import { VideoComponent } from './video/video.component';
 import { CustomcardComponent } from './customcard/customcard.component';
 import { RandomInfoComponent } from "./random-video/random-info/random-info.component";
 import { RandomChattingComponent } from "./random-video/random-chatting/random-chatting.component";
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   imports     : [
@@ -51,7 +52,8 @@ import { RandomChattingComponent } from "./random-video/random-chatting/random-c
     RandomVideoComponent,
     RandomInfoComponent,
     RandomChattingComponent,
-    CustomcardComponent
+    CustomcardComponent,
+    UploadComponent
   ],
   exports     : [
     AppComponent,
