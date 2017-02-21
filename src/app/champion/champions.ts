@@ -1,4 +1,8 @@
-const champions: Object[] = [
+/**
+ * 챔피언 리스트 파일
+ * Location: /src/app/champion/champion.ts
+ */
+const championsList: Object[] = [
   { name: '가렌', enName: 'Garen' },
   { name: '갈리오', enName: 'Galio' },
   { name: '갱플랭크', enName: 'Gangplank' },
@@ -134,3 +138,5 @@ const champions: Object[] = [
   { name: '하이머딩거', enName: 'Heimerdinger' },
   { name: '헤카림', enName: 'Hecarim' },
 ];
+
+export default championsList;

@@ -1,8 +1,8 @@
-<div class="main">
-  <input [(ngModel)]="champion" placeholder="챔피언을 입력하세요."/>
+<div class="main" *ngIf="champions">
+  <input [(ngModel)]="myChampion" placeholder="챔피언을 입력하세요."/>
   <ul>
     <li *ngFor="let champion of champions">
-
+      {{champion.name}}
     </li>
   </ul>
 </div>

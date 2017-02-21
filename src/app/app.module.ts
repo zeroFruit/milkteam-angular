@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
-
+import { CommonModule} from '@angular/common';
+import { FormsModule } from '@angular/forms';
 // 유튜브모듈
 import { YoutubePlayerModule } from 'ng2-youtube-player';
 // Angular Imports
@@ -22,6 +23,8 @@ import { UploadComponent } from './upload/upload.component';
 @NgModule({
   imports     : [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     YoutubePlayerModule,
     RouterModule.forRoot([
       {
