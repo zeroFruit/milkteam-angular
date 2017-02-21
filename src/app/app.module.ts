@@ -20,6 +20,9 @@ import { RandomInfoComponent } from "./random-video/random-info/random-info.comp
 import { RandomChattingComponent } from "./random-video/random-chatting/random-chatting.component";
 import { UploadComponent } from './upload/upload.component';
 
+// Import Pipe
+import { ChampionPipe } from './champion/champion.pipe';
+
 @NgModule({
   imports     : [
     BrowserModule,
@@ -56,7 +59,8 @@ import { UploadComponent } from './upload/upload.component';
     RandomInfoComponent,
     RandomChattingComponent,
     CustomcardComponent,
-    UploadComponent
+    UploadComponent,
+    ChampionPipe
   ],
   exports     : [
     AppComponent,
