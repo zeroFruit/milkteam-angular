@@ -1,0 +1,25 @@
+<div class="join">
+  <div class="text-join box-header">
+    계정 생성
+  </div>
+  <div class="input-join box-body">
+    <div class="wrapper-nickname">
+      <input type="text" placeholder="닉네임 입력" #nickname>
+    </div>
+    <div class="wrapper-id">
+      <input type="text" placeholder="이메일 주소 입력" #email>
+    </div>
+    <div class="wrapper-pw">
+      <input type="password" placeholder="비밀번호 입력" #password>
+    </div>
+    <div class="wrapper-pw2">
+      <input type="password" placeholder="비밀번호 입력" #password2>
+    </div>
+    <div class="terms">
+      LEVEND TV 계정을 만들면 사용약관 및 개인정보 취급 방침에 동의하는 것입니다.
+    </div>
+  </div>
+  <div class="wrapper-join-btn box-footer">
+    <button (click)="join(email.value, password.value, password2.value, nickname.value)">계정 만들기</button>
+  </div>
+</div>

@@ -32,6 +32,7 @@
     "intl": "*",
     "ng2-youtube-player": "0.0.1",
     "rxjs": "*",
+    "socket.io-client": "^1.7.2",
     "typings": "^2.1.0",
     "zone.js": "*"
   },

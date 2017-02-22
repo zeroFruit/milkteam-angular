@@ -1,25 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import championsList from '../champion/champions';
+/**
+ * Created by hackurity on 2017. 2. 21..
+ */
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'upload',
+  selector   : 'upload',
   templateUrl: 'upload.component.html',
-  styleUrls: ['upload.component.scss']
+  styleUrls  : ['upload.component.scss']
 })
-export class UploadComponent implements OnInit {
-  myChampion: String;
-  champions: Object[];
-  constructor() {
-    this.champions = championsList;
-  }
+export class UploadComponent {
+  type: string;
 
-  /**
-   * 챔피언 이미지 src 반환함수
-   * @params enName
-   */
-  championImage (enName) {
-    return `../../../public/images/champions/${enName}.png`;
+  toggleBtn(type) {
+    this.type = type;
   }
-
-  ngOnInit() {}
 }

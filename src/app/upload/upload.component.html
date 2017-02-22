@@ -1,9 +1,78 @@
-<div class="main" *ngIf="champions">
-  <input [(ngModel)]="myChampion" placeholder="챔피언을 입력하세요."/>
-  <ul>
-    <li *ngFor="let champion of champions | champion: myChampion">
-      <img [src]="championImage(champion.enName)"/>
-      {{champion.name}}
-    </li>
-  </ul>
+<div class="upload">
+  <div class="border">
+    <div class="text-upload">영상 업로드</div>
+    <div class="wrapper-btn-type">
+      <button class="btn btn-mad" value="mad" (click)="toggleBtn('mad')" [ngClass]="{active: type=='mad'}">매드무비</button>
+      <button class="btn btn-dead" value="dead" (click)="toggleBtn('dead')" [ngClass]="{active: type=='dead'}">데드무비</button>
+    </div>
+    <div class="wrapper-champions">
+      <div class="wrapper-label">
+        <span class="label">챔프 선택</span>
+        <span class="label-sub">(영상의 주인공이 되는 챔프를 선택해주세요.)</span>
+      </div>
+      <input type="text">
+    </div>
+    <div class="wrapper-title">
+      <div class="wrapper-label">
+        <span class="label">제목</span>
+        <span class="label-sub">(0/20)</span>
+      </div>
+      <input type="text">
+    </div>
+    <div class="wrapper-desc">
+      <div class="wrapper-label">
+        <span class="label">내용</span>
+      </div>
+      <textarea></textarea>
+    </div>
+    <div class="wrapper-video-url">
+      <div class="wrapper-label">
+        <span class="label">유투브 영상 URL</span>
+      </div>
+      <input type="text">
+    </div>
+    <div class="wrapper-position">
+      <div class="wrapper-label">
+        <span class="label">포지션</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-position" value="top"><span class="label">탑</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-position" value="mid"><span class="label">미드</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-position" value="deal"><span class="label">원딜</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-position" value="sup"><span class="label">서폿</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-position" value="jun"><span class="label">정글</span>
+      </div>
+    </div>
+    <div class="wrapper-tier">
+      <span class="wrapper-label">티어</span>
+      <select>
+        <option>챌린저</option>
+        <option>마스터</option>
+        <option>다이아</option>
+        <option>플레티넘</option>
+        <option>골드</option>
+        <option>실버</option>
+        <option>브론즈</option>
+      </select>
+    </div>
+    <div class="wrapper-char">
+      <div class="wrapper-label">
+        <span class="label">특성</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-char" value="ad"><span class="label">AD</span>
+      </div>
+      <div class="wrapper-radio">
+        <input type="radio" name="radio-char" value="ap"><span class="label">AP</span>
+      </div>
+    </div>
+  </div>
 </div>

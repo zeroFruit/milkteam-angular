@@ -1,0 +1,17 @@
+<div class="login">
+  <div class="text-login box-header">
+    LOGIN
+  </div>
+  <div class="input-login box-body">
+    <div class="wrapper-id">
+      <input type="text" placeholder="아이디 입력" #email>
+    </div>
+    <div class="wrapper-pw">
+      <input type="password" placeholder="비밀번호 입력" #password>
+    </div>
+    <button (click)="login(email.value, password.value)">로그인</button>
+  </div>
+  <div class="social-login box-footer">
+    <button class="btn-round">facebook으로 로그인 하기</button>
+  </div>
+</div>

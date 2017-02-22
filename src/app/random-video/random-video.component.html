@@ -1,6 +1,10 @@
-<lol-video [videoId]="videoId"
+<lol-video [videoId]="video.videoId"
            [black_gradient]="true"
            (video_status)="videoStatusChange(status)"
 ></lol-video>
-<random-chatting></random-chatting>
+<random-chatting [chattings]="chattings"
+                 (chatClicked)="chatClicked($event)"
+></random-chatting>
 <random-info></random-info>
+<input type="text" [(ngModel)]="test">
+<button (click)="socket()">socket</button>

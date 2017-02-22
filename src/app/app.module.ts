@@ -1,13 +1,13 @@
+// Import Modules
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 import { CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
-// 유튜브모듈
+import { HttpModule } from "@angular/http";
 import { YoutubePlayerModule } from 'ng2-youtube-player';
-// Angular Imports
-import { NgModule } from '@angular/core';
 
-// This Module's Components
+// Import Components
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { BattleVideoComponent } from './battle-video/battle-video.component';
@@ -18,35 +18,56 @@ import { VideoComponent } from './video/video.component';
 import { CustomcardComponent } from './customcard/customcard.component';
 import { RandomInfoComponent } from "./random-video/random-info/random-info.component";
 import { RandomChattingComponent } from "./random-video/random-chatting/random-chatting.component";
+import { AuthComponent } from "./auth/auth.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { JoinComponent } from "./auth/join/join.component";
+import { FindPwComponent } from "./auth/find-pw/find-pw.component";
 import { UploadComponent } from './upload/upload.component';
+import { ChampionComponent } from './champion/champion.component';
+
+// Import Services
+import { RandomVideoService } from "./random-video/random-video.service";
+import { AuthService } from "./auth/auth.service";
 
 // Import Pipe
 import { ChampionPipe } from './champion/champion.pipe';
+
 
 @NgModule({
   imports     : [
     BrowserModule,
     CommonModule,
     FormsModule,
+    HttpModule,
     YoutubePlayerModule,
     RouterModule.forRoot([
       {
-        path: 'main',
+        path     : 'main',
         component: RandomVideoComponent
       }, {
-        path: 'battle',
+        path     : 'battle',
         component: BattleVideoComponent
       }, {
-        path: 'video',
+        path     : 'video',
         component: VideoComponent
       }, {
-        path: 'filter',
+        path     : 'filter',
         component: CustomcardComponent
       }, {
-        path: '',
+        path     : '',
         component: RandomVideoComponent
+      }, {
+        path     : 'auth',
+        component: AuthComponent
+      }, {
+        path     : 'upload',
+        component: UploadComponent
       }
     ])
+  ],
+  providers   : [
+    RandomVideoService,
+    AuthService
   ],
   declarations: [
     AppComponent,
@@ -59,8 +80,15 @@ import { ChampionPipe } from './champion/champion.pipe';
     RandomInfoComponent,
     RandomChattingComponent,
     CustomcardComponent,
-    UploadComponent,
-    ChampionPipe
+    ChampionComponent,
+    ChampionPipe,
+    //Auth
+    AuthComponent,
+    LoginComponent,
+    JoinComponent,
+    FindPwComponent,
+    //Upload
+    UploadComponent
   ],
   exports     : [
     AppComponent,

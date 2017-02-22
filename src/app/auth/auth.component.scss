@@ -1,0 +1,30 @@
+.auth {
+  height: 400px;
+  text-align: center;
+  padding-top: 100px;
+  vertical-align: middle;
+
+  .wrapper-login {
+    width: 300px;
+    display: inline-block;
+    border: 1px solid black;
+    height: 100%;
+    vertical-align: top;
+  }
+
+  .wrapper-join {
+    width: 300px;
+    display: inline-block;
+    border: 1px solid black;
+    height: 100%;
+    vertical-align: top;
+  }
+
+  .wrapper-find-pw {
+    width: 300px;
+    display: inline-block;
+    border: 1px solid black;
+    height: 100%;
+    vertical-align: top;
+  }
+}

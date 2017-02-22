@@ -8,7 +8,8 @@
       </div>
     </div>
   </div>
-  <div class="input-chatting">
-
+  <div class="wrapper-chat">
+    <input type="text" class="input-chat" #message>
+    <a class="btn-chat" (click)="onChat(message.value)"><img src="/public/images/bitmap.png" class="img-chat"></a>
   </div>
 </div>
