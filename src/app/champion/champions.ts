@@ -81,7 +81,7 @@ const championsList: Object[] = [
   { name: '야스오', enName: 'Yasuo' },
   { name: '에코', enName: 'Ekko' },
   { name: '엘리스', enName: 'Elise' },
-  { name: '오공', enName: 'Wukong' },
+  { name: '오공', enName: 'MonkeyKing' },
   { name: '오리아나', enName: 'Orianna' },
   { name: '올라프', enName: 'Olaf' },
   { name: '요릭', enName: 'Yorick' },

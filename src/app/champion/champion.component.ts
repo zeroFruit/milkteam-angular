@@ -9,7 +9,7 @@ import championsList from './champions';
 @Component({
   selector: 'champion',
   templateUrl: 'champion.component.html',
-  styleUrls: ['champion.component.scss']
+  styleUrls: ['../app.component.scss', 'champion.component.scss']
 })
 export class ChampionComponent implements OnInit {
   myChampion: String;

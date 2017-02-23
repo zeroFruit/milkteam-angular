@@ -1,9 +1,45 @@
 .test {
   background-color: white;
 }
+
+input {
+  width: 220px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #000000;
+  padding: 8px 12px;
+}
+
 ul {
   background-color: white;
+  padding:0px;
+  margin: 0px;
+  border-radius: 0 0 5px 5px;
+}
+
+li {
+  height: 50px;
+  width:220px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: solid 1px #808080;
+}
+
+li > span {
+  margin-left:12px;
+  font-family: SpoqaHanSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: -0.2px;
+  color: rgba(0, 0, 0, 0.7);
 }
 .main{
   position: absolute;
+}
+img {
+  width:50px;
 }
