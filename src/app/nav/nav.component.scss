@@ -1,8 +1,7 @@
-// component css goes here
-
 
 .header {
   width:100%;
+  min-width: 1200px;
   height:106px;
   display: flex;
   flex-direction: row;
@@ -20,10 +19,23 @@
   width:34%;
 }
 
+.header_left{
+  display: flex;
+  align-items: center;
+}
+
+.header_left > .video_switch {
+  margin-left: 40px;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.text_logo {
+  margin-left: 9px;
 }
 
 .position_list{
@@ -32,10 +44,189 @@
   justify-content: center;
 }
 
+.position_list > li {
+  margin: 0 13px;
+  width: 69px;
+  height: 69px;
+}
+
+.position_list > .top {
+  background-image: url(/public/images/button-top-off.png);
+  background-size: cover;
+}
+
+.position_list > .jungle {
+  background-image: url(/public/images/button-jungle-off.png);
+  background-size: cover;
+}
+
+.position_list > .mid {
+  background-image: url(/public/images/button-mid-off.png);
+  background-size: cover;
+}
+
+.position_list > .sup {
+  background-image: url(/public/images/button-sup-off.png);
+  background-size: cover;
+}
+
+.position_list > .ad {
+  background-image: url(/public/images/button-ad-off.png);
+  background-size: cover;
+}
+
+.position_list > .selectedTop {
+  background-image: url(/public/images/button-top-on.png);
+}
+
+.position_list > .selectedJungle {
+  background-image: url(/public/images/button-jungle-on.png);
+}
+
+.position_list > .selectedMid {
+  background-image: url(/public/images/button-mid-on.png);
+}
+
+.position_list > .selectedSup {
+  background-image: url(/public/images/button-sup-on.png);
+}
+
+.position_list > .selectedAd {
+  background-image: url(/public/images/button-ad-on.png);
+}
+
 .user_control{
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
   justify-content: flex-end;
+}
+
+.setting{
+  margin-left: 22px;
+}
+
+.nickname{
+  margin-left: 22px;
+}
+
+.profile {
+  margin-left: 12px;
+}
+
+.drop{
+  margin-left: 13px;
+}
+
+/* switch */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  height: 46px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 100px;
+  border: solid 1px rgba(255,255,255,0.4);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px;
+  width: 94px;
+  left: 5px;
+  bottom: 5px;
+  background-color: #4369ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:checked + .slider {
+  /*background-color: #2196F3;*/
+
+}
+
+input:focus + .slider {
+  /*box-shadow: 0 0 1px #2196F3;*/
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(85px);
+  -ms-transform: translateX(85px);
+  transform: translateX(85px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 36px;
+}
+
+.slider.round:before {
+  border-radius: 36px;
+}
+
+
+.text {
+  font-family: SpoqaHanSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.22;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.text:after {
+  position: absolute;
+  top: 11px;
+  right: 16px;
+  content: "대결영상";
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.text:before {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  content: "랜덤영상";
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+input + .slider + .text:after {
+  opacity: 0.4;
+}
+input + .slider + .text:before {
+  opacity: 1;
+}
+
+
+input:checked + .slider + .text:after {
+  opacity: 1;
+}
+
+input:checked + .slider + .text:before {
+  opacity: 0.4;
 }

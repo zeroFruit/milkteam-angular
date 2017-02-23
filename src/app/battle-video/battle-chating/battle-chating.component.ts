@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
     styleUrls: ['../../app.component.scss', '../battle-video.component.css', 'battle-chating.component.scss']
 })
 export class BattleChatingComponent {
+    leftChamp: Boolean = true;
 
+    champSwitch(boolCheck) {
+      if (boolCheck != this.leftChamp) {
+        this.leftChamp = !this.leftChamp;
+      }
+    }
 }

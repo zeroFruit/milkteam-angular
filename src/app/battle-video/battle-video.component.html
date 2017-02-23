@@ -13,7 +13,7 @@
     </section>
   </div>
 
-  <div class="battle_wrap">
+  <div class="battle_wrap bw2">
     <section class="battle_video">
       <h2 class="hidden-title">미스포츈으로 캐리한 매드무비입니다. vs 제가 자이라로 하드캐리한 매드무비입니다.</h2>
       <div class="videos">
@@ -75,15 +75,21 @@
     <div class="play_control">
       <span class="prvious_video">PREVIOUS VIDEO</span>
       <img src="/public/images/button-previous-video.png" alt>
-      <img class="stop_btn" src="/public/images/button-pause.png" alt="Stop Button">
+      <div class="play_btn" (click)="playBtnClick()"  [class.stop_btn]="!playStatus"></div>
       <img src="/public/images/button-next-video.png" alt>
       <span class="next_video">NEXT VIDEO</span>
     </div>
     <div class="play_option">
-      <img class="continuous_play_img" src="/public/images/button-continuous-play-on.png" alt>
-      <span class="continuous_play">연속재생</span>
-      <img class="random_play_img" src="/public/images/button-random-play-off.png" alt>
-      <span class="random_play">랜덤재생</span>
+      <div class="coninuous_wrap" (click)="continueBtnClick()">
+        <div class="continuous_play_img"  [class.continuous_on]="continuousStatus" [class.continuous_off]="!continuousStatus">
+        </div>
+        <span class="continuous_play" [class.continuous_on_text]="continuousStatus" [class.continuous_off_text]="!continuousStatus">연속재생</span>
+      </div>
+      <div class="random_wrap" (click)="randomBtnClick()">
+        <div class="random_play_img"  [class.random_on]="randomStatus" [class.random_off]="!randomStatus">
+        </div>
+        <span class="random_play" [class.random_on_text]="randomStatus" [class.random_off_text]="!randomStatus">랜덤재생</span>
+      </div>
     </div>
     <div class="history_btn">
       <img src="/public/images/button-up.png" alt="">

@@ -63,8 +63,11 @@
   width:73%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
   border-bottom: solid 1px #ffffff;
+}
+
+.bw2 {
+  margin-bottom: 30px;
 }
 
 .videos {
@@ -248,6 +251,7 @@ battle-chating{
 }
 
 .footer > .container {
+  position: relative;
   min-height: 100%;
   width:100%;
   min-width:1200px;
@@ -273,8 +277,15 @@ battle-chating{
   border-right:1px solid #a4a4a4;
 }
 
-.play_control > .stop_btn {
+.play_control > .play_btn {
   margin: 0 28px;
+  height:50px;
+  width:50px;
+  background-image: url(/public/images/button-play.png);
+}
+
+.play_control > .stop_btn {
+  background-image: url(/public/images/button-pause.png);
 }
 
 .prvious_video {
@@ -291,6 +302,10 @@ battle-chating{
   align-items: center;
 }
 
+.coninuous_wrap {
+  display: flex;
+  align-items: center;
+}
 
 .continuous_play {
   font-family: RixGoB;
@@ -306,6 +321,29 @@ battle-chating{
 
 .continuous_play_img {
   margin-left: 65px;
+  width:27px;
+  height:16px;
+}
+
+.continuous_on {
+  background-image: url(/public/images/button-continuous-play-on.png);
+}
+
+.continuous_on_text{
+  color: #344cff;
+}
+
+.continuous_off {
+  background-image: url(/public/images/button-continuous-play-off.png);
+}
+
+.continuous_off_text {
+  color: #a4a4a4;
+}
+
+.random_wrap {
+  display: flex;
+  align-items: center;
 }
 
 .random_play {
@@ -322,10 +360,28 @@ battle-chating{
 
 .random_play_img{
   margin-left: 20px;
+  width:27px;
+  height:16px;
+}
+
+.random_on {
+  background-image: url(/public/images/button-random-play-on.png);
+}
+
+.random_on_text{
+  color: #344cff;
+}
+
+.random_off {
+  background-image: url(/public/images/button-random-play-off.png);
+}
+
+.random_off_text{
+  color: #a4a4a4;
 }
 
 .history_btn {
   position: absolute;
-  right:2.8%;
-  bottom:4%;
+  right:33px;
+  top:-37.5px;
 }

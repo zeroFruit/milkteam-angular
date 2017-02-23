@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BattleVideoService } from "./battle-video.service";
 
 @Component({
@@ -7,11 +7,21 @@ import { BattleVideoService } from "./battle-video.service";
     styleUrls: ['../app.component.scss', 'battle-video.component.css' ],
     providers: [BattleVideoService]
 })
-export class BattleVideoComponent implements OnInit {
+export class BattleVideoComponent {
+    playStatus: Boolean = true;
+    continuousStatus: Boolean = true;
+    randomStatus: Boolean = false;
 
-    constructor() {}
-
-    ngOnInit() {
-
+    playBtnClick() {
+        this.playStatus = !this.playStatus;
     }
+
+    continueBtnClick() {
+        this.continuousStatus = !this.continuousStatus;
+    }
+
+    randomBtnClick() {
+        this.randomStatus = !this.randomStatus;
+    }
+
 }
