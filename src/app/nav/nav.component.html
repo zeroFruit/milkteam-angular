@@ -19,20 +19,59 @@
         <li class="mid" (click)="onSelected('mid')" [class.selectedMid]="selected == 'mid'"></li>
         <li class="sup" (click)="onSelected('sup')" [class.selectedSup]="selected == 'sup'"></li>
         <li class="ad" (click)="onSelected('ad')" [class.selectedAd]="selected == 'ad'"></li>
-        <!-- <li><img src="/public/images/button-top-off.png" alt="top"></li>
-        <li><img src="/public/images/button-jungle-off.png" alt="jungle"></li>
-        <li><img src="/public/images/button-mid-off.png" alt="mid"></li>
-        <li><img src="/public/images/button-sup-off.png" alt="support"></li>
-        <li><img src="/public/images/button-ad-off.png" alt="ad"></li> -->
       </ul>
     </div>
     <div class="header_ele header_right">
       <ul class="user_control">
         <li class="upload"><img src="/public/images/button-upload.png" alt="upload" /></li>
         <li class="setting"><img src="/public/images/combined-shape.png" alt="setting" /></li>
-        <li class="nickname">Junghyun Park</li>
-        <li class="profile"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
-        <li class="drop"><img src="/public/images/button-profile.png" alt="drop down" /></li>
+        <li class="nickname" (click)="dropSelect()">Junghyun Park</li>
+        <li class="profile" (click)="dropSelect()"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
+        <li class="drop" (click)="dropSelect()">
+          <div class="drop_img" [class.drop_down]="dropDown"  [class.drop_up]="!dropDown">
+          </div>
+        </li>
       </ul>
+
+      <div class="dropdown_menu" *ngIf="!dropDown">
+        <button class="drop_btn my_account"><img src="/public/images/user-icon2.png" alt="user icon"><span>내 계정</span></button>
+        <button class="drop_btn logout"><img src="/public/images/logout-icon.png" alt="logout icon"><span>로그아웃</span></button>
+        <div class="alarm_wrap">
+          <div class="alarm_champ">
+            <img src="" alt="champion">
+          </div>
+          <div class="alarm_content">
+            <div class="alarm_text">
+              <span>
+                회원님의 매드무비가 메인영상에 올라왔습니다!
+              </span>
+            </div>
+            <div class="alarm_time">
+              <img src="/public/images/star.png" alt="type">
+              <span>
+                1시간 전
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="alarm_wrap">
+          <div class="alarm_champ">
+            <img src="" alt="champion">
+          </div>
+          <div class="alarm_content">
+            <div class="alarm_text">
+              <span>
+                회원님의 매드무비가 메인영상에 올라왔습니다!
+              </span>
+            </div>
+            <div class="alarm_time">
+              <img src="/public/images/star.png" alt="type">
+              <span>
+                1시간 전
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </header>

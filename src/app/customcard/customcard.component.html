@@ -1,97 +1,105 @@
 <div class="container">
   <section class="customizing">
     <div class="card_wrap char_wrap">
+      <div class="hiddenwrap"></div>
       <article class="card character">
         <div class="card_title"><h2>CHARACTER</h2></div>
         <div class="card_btns">
-          <button class="char_btn ap_btn" value="ap" (click)="activeBtn1()" [ngClass]="{active: isActive1}">
+          <button class="char_btn ap_btn" value="ap" (click)="activeBtn1()" [ngClass]="{active: isAp}">
             <span class="char_text">AP</span>
           </button>
-          <button class="char_btn ad_btn" value="ad" (click)="activeBtn2()" [ngClass]="{active: isActive2}">
+          <button class="char_btn ad_btn" value="ad" (click)="activeBtn2()" [ngClass]="{active: isAd}">
             <span class="char_text">AD</span>
           </button>
         </div>
         <div class="card_desc">Click the champion character you <br />want to see! Or you can skip this step.</div>
       </article>
+      <div class="hiddenwrap"></div>
     </div>
     <div class="card_wrap po_wrap">
+      <div class="hiddenwrap"></div>
       <article class="card position">
         <div class="card_title"><h2>POSITION</h2></div>
         <div class="card_btns">
           <div class="left_btn">
-            <button class="po_btn" value="top" (click)="activeBtn3()" [ngClass]="{active: isActive3}">
+            <button class="po_btn" value="top" (click)="activeBtn3()" [ngClass]="{active: isTop}">
               <span class="po_text">TOP</span>
             </button>
           </div>
           <div class="cen_btn">
-            <button class="po_btn" value="jungle" (click)="activeBtn4()" [ngClass]="{active: isActive4}">
+            <button class="po_btn" value="jungle" (click)="activeBtn4()" [ngClass]="{active: isJungle}">
               <span class="po_text">JUNGLE</span>
             </button>
           </div>
           <div class="right_btn">
-            <button class="po_btn" value="mid" (click)="activeBtn5()" [ngClass]="{active:isActive5}">
+            <button class="po_btn" value="mid" (click)="activeBtn5()" [ngClass]="{active:isMid}">
               <span class="po_text">MID</span>
             </button>
           </div>
           <div class="cen_btn">
-            <button class="po_btn" value="dealer" (click)="activeBtn6()" [ngClass]="{active: isActive6}">
+            <button class="po_btn" value="dealer" (click)="activeBtn6()" [ngClass]="{active: isDealer}">
               <span class="po_text">DEALER</span>
             </button>
           </div>
           <div class="right_btn">
-            <button class="po_btn" value="sup" (click)="activeBtn7()" [ngClass]="{active: isActive7}">
+            <button class="po_btn" value="sup" (click)="activeBtn7()" [ngClass]="{active: isSup}">
               <span class="po_text">SUPPORT</span>
             </button>
           </div>
         </div>
         <div class="card_desc">Click the champion character you <br />want to see! Or you can skip this step.</div>
       </article>
+      <div class="hiddenwrap">
         <button class="save_btn">
           <span>저장</span>
         </button>
+      </div>
     </div>
     <div class="card_wrap tier_wrap">
-      <div class="pass_btn">
-        <span>건너뛰기</span><img src="/public/images/arrow_right.png" alt="right arrow">
+      <div class="hiddenwrap">
+        <div class="pass_btn">
+          <span>건너뛰기</span><img src="/public/images/arrow_right.png" alt="right arrow">
+        </div>
       </div>
       <article class="card tier">
         <div class="card_title"><h2>TIER</h2></div>
         <div class="card_btns">
           <div class="tier_wrap lv1">
-            <button class="tier_btn unranked" value="unranked" (click)="activeBtn8()" [ngClass]="{active: isActive8}">
+            <button class="tier_btn unranked" value="unranked" (click)="activeBtn8()" [ngClass]="{active: isUnranked}">
               <span>UNRANKED</span>
             </button>
-            <button class="tier_btn bronze" value="bronze" (click)="activeBtn9()" [ngClass]="{active: isActive9}">
+            <button class="tier_btn bronze" value="bronze" (click)="activeBtn9()" [ngClass]="{active: isBronze}">
               <span>BRONZE</span>
             </button>
           </div>
           <div class="tier_wrap lv2">
-            <button class="tier_btn silver" value="silver" (click)="activeBtn10()" [ngClass]="{active: isActive10}">
+            <button class="tier_btn silver" value="silver" (click)="activeBtn10()" [ngClass]="{active: isSilver}">
               <span>SILVER</span>
             </button>
-            <button class="tier_btn gold" value="gold" (click)="activeBtn11()" [ngClass]="{active: isActive11}">
+            <button class="tier_btn gold" value="gold" (click)="activeBtn11()" [ngClass]="{active: isGold}">
               <span>GOLD</span>
             </button>
-            <button class="tier_btn platinum" value="platinum" (click)="activeBtn12()" [ngClass]="{active: isActive12}">
+            <button class="tier_btn platinum" value="platinum" (click)="activeBtn12()" [ngClass]="{active: isPlatinum}">
               <span>PLATINUM</span>
             </button>
           </div>
           <div class="tier_wrap lv3">
-            <button class="tier_btn diamond" value="diamond" (click)="activeBtn13()" [ngClass]="{active: isActive13}">
+            <button class="tier_btn diamond" value="diamond" (click)="activeBtn13()" [ngClass]="{active: isDiamond}">
               <span>DIAMOND</span>
             </button>
-            <button class="tier_btn master" value="master" (click)="activeBtn14()" [ngClass]="{active: isActive14}">
+            <button class="tier_btn master" value="master" (click)="activeBtn14()" [ngClass]="{active: isMaster}">
               <span>MASTER</span>
             </button>
           </div>
           <div class="tier_wrap lv4">
-            <button class="tier_btn challenger" value="challenger" (click)="activeBtn15()" [ngClass]="{active: isActive15}">
+            <button class="tier_btn challenger" value="challenger" (click)="activeBtn15()" [ngClass]="{active: isChallenger}">
               <span>CHALLENGER</span>
             </button>
           </div>
         </div>
         <div class="card_desc">Click the champion character you <br />want to see! Or you can skip this step.</div>
       </article>
+      <div class="hiddenwrap"></div>
     </div>
   </section>
 </div>

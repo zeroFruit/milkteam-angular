@@ -1,8 +1,11 @@
 /* customizing*/
 
+.container {
+}
+
 .customizing {
   height: 100vh;
-  width:70%;
+  min-height:940px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -10,7 +13,14 @@
 
 .card_wrap {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hiddenwrap{
+  width:100%;
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
@@ -109,10 +119,6 @@ button.active {
 .position > .card_btns {
   padding-left: 34px;
   padding-right: 34px;
-}
-
-.po_wrap{
-  justify-content: center;
 }
 
 .po_btn {
@@ -260,6 +266,7 @@ button.active {
   right:0;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .pass_btn > span {

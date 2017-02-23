@@ -48,6 +48,7 @@
   margin: 0 13px;
   width: 69px;
   height: 69px;
+  cursor:pointer;
 }
 
 .position_list > .top {
@@ -103,6 +104,10 @@
   justify-content: flex-end;
 }
 
+.user_control > li {
+  cursor:pointer;
+}
+
 .setting{
   margin-left: 22px;
 }
@@ -111,12 +116,27 @@
   margin-left: 22px;
 }
 
+
+
 .profile {
   margin-left: 12px;
 }
 
 .drop{
   margin-left: 13px;
+}
+
+.drop_img {
+  width:18px;
+  height:11px;
+}
+
+.drop_down {
+  background-image: url(/public/images/drop-down.png);
+}
+
+.drop_up {
+  background-image: url(/public/images/drop-up.png);
 }
 
 /* switch */
@@ -127,6 +147,7 @@
   display: inline-block;
   width: 190px;
   height: 46px;
+  cursor:pointer;
 }
 
 /* Hide default HTML checkbox */
@@ -229,4 +250,103 @@ input:checked + .slider + .text:after {
 
 input:checked + .slider + .text:before {
   opacity: 0.4;
+}
+
+
+//  dropdown
+.header_right{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdown_menu{
+  display: flex;
+  flex-direction: column;
+  width:250px;
+  border-radius: 3px;
+  position: absolute;
+  top:100px;
+  cursor:pointer;
+}
+
+.drop_btn{
+  cursor:pointer;
+  background-color: #4369ff;
+  font-family: SpoqaHanSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.93;
+  letter-spacing: normal;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.my_account {
+  border-radius: 3px 3px 0 0;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.12);
+}
+
+.my_account > span {
+  margin-left: 15px;
+}
+
+.logout > span {
+  margin-left: 10px;
+}
+
+.alarm_wrap {
+  display: flex;
+  background-color: #fff;
+  border-bottom: solid 1px rgba(163, 163, 163, 0.12);
+}
+
+.alarm_champ{
+  width:27%;
+  display: flex;
+  justify-content: center;
+  padding:15px;
+}
+
+.alarm_champ > img {
+  width:28px;
+  height:28px;
+}
+
+.alarm_content{
+  width:73%;
+  padding-top:9px;
+  padding-right: 12px;
+  padding-bottom:10px;
+}
+
+.alarm_text > span {
+  font-family: SpoqaHanSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.alarm_time{
+  margin-top: 6px;
+}
+
+.alarm_time > span {
+  font-family: SpoqaHanSans;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.92;
+  letter-spacing: normal;
+  color: #a4a4a4;
 }

@@ -315,6 +315,7 @@
 }
 
 .video_card{
+  cursor: pointer;
   position: relative;
   width:210px;
   height: 245px;

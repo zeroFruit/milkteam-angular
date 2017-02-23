@@ -75,7 +75,7 @@
     <div class="play_control">
       <span class="prvious_video">PREVIOUS VIDEO</span>
       <img src="/public/images/button-previous-video.png" alt>
-      <div class="play_btn" (click)="playBtnClick()"  [class.stop_btn]="!playStatus"></div>
+      <div class="play" (click)="playBtnClick()"  [class.stop_btn]="playStatus"  [class.play_btn]="!playStatus"></div>
       <img src="/public/images/button-next-video.png" alt>
       <span class="next_video">NEXT VIDEO</span>
     </div>

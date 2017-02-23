@@ -100,6 +100,11 @@
   padding-top: 30px;
 }
 
+.voting > img {
+
+  cursor:pointer;
+}
+
 .perNum {
   font-family: SpoqaHanSans;
   font-size: 24px;
@@ -277,11 +282,20 @@ battle-chating{
   border-right:1px solid #a4a4a4;
 }
 
-.play_control > .play_btn {
+.play_control > img {
+  cursor:pointer;
+}
+
+.play{
   margin: 0 28px;
   height:50px;
   width:50px;
+  cursor:pointer;
+}
+
+.play_control > .play_btn {
   background-image: url(/public/images/button-play.png);
+
 }
 
 .play_control > .stop_btn {
@@ -290,10 +304,12 @@ battle-chating{
 
 .prvious_video {
   margin-right: 10px;
+  cursor:pointer;
 }
 
 .next_video {
   margin-left: 10px;
+  cursor:pointer;
 }
 
 .play_option{
@@ -305,6 +321,7 @@ battle-chating{
 .coninuous_wrap {
   display: flex;
   align-items: center;
+  cursor:pointer;
 }
 
 .continuous_play {
@@ -344,6 +361,7 @@ battle-chating{
 .random_wrap {
   display: flex;
   align-items: center;
+  cursor:pointer;
 }
 
 .random_play {
@@ -384,4 +402,5 @@ battle-chating{
   position: absolute;
   right:33px;
   top:-37.5px;
+  cursor:pointer;
 }

@@ -102,6 +102,7 @@
   justify-content: center;
   align-items: center;
   background-color: #efefef;
+  cursor:pointer;
 }
 
 .login_btn > span {
@@ -148,6 +149,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor:pointer;
 }
 
 .log > .card_bottom > .bottom_btn {
@@ -196,6 +198,7 @@
   border: solid 2px #ffffff;
   border-radius: 27px;
   background-color: rgba(239, 239, 239, 0.0);
+  cursor:pointer;
 }
 
 .unlogin > span {

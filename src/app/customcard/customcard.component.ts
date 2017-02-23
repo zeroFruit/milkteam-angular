@@ -10,66 +10,66 @@ export class CustomcardComponent {
   // position: string[] = [];
   // tier: string[] = [];
 
-  isActive1: boolean = false;
-  isActive2: boolean = false;
-  isActive3: boolean = false;
-  isActive4: boolean = false;
-  isActive5: boolean = false;
-  isActive6: boolean = false;
-  isActive7: boolean = false;
-  isActive8: boolean = false;
-  isActive9: boolean = false;
-  isActive10: boolean = false;
-  isActive11: boolean = false;
-  isActive12: boolean = false;
-  isActive13: boolean = false;
-  isActive14: boolean = false;
-  isActive15: boolean = false;
+  isAp: boolean = false;
+  isAd: boolean = false;
+  isTop: boolean = false;
+  isJungle: boolean = false;
+  isMid: boolean = false;
+  isDealer: boolean = false;
+  isSup: boolean = false;
+  isUnranked: boolean = false;
+  isBronze: boolean = false;
+  isSilver: boolean = false;
+  isGold: boolean = false;
+  isPlatinum: boolean = false;
+  isDiamond: boolean = false;
+  isMaster: boolean = false;
+  isChallenger: boolean = false;
 
   activeBtn1() {
-    this.isActive1 = !this.isActive1;
+    this.isAp = !this.isAp;
   }
   activeBtn2() {
-    this.isActive2 = !this.isActive2;
+    this.isAd = !this.isAd;
   }
   activeBtn3() {
-    this.isActive3 = !this.isActive3;
+    this.isTop = !this.isTop;
   }
   activeBtn4() {
-    this.isActive4 = !this.isActive4;
+    this.isJungle = !this.isJungle;
   }
   activeBtn5() {
-    this.isActive5 = !this.isActive5;
+    this.isMid = !this.isMid;
   }
   activeBtn6() {
-    this.isActive6 = !this.isActive6;
+    this.isDealer = !this.isDealer;
   }
   activeBtn7() {
-    this.isActive7 = !this.isActive7;
+    this.isSup = !this.isSup;
   }
   activeBtn8() {
-    this.isActive8 = !this.isActive8;
+    this.isUnranked = !this.isUnranked;
   }
   activeBtn9() {
-    this.isActive9 = !this.isActive9;
+    this.isBronze = !this.isBronze;
   }
   activeBtn10() {
-    this.isActive10 = !this.isActive10;
+    this.isSilver = !this.isSilver;
   }
   activeBtn11() {
-    this.isActive11 = !this.isActive11;
+    this.isGold = !this.isGold;
   }
   activeBtn12() {
-    this.isActive12 = !this.isActive12;
+    this.isPlatinum = !this.isPlatinum;
   }
   activeBtn13() {
-    this.isActive13 = !this.isActive13;
+    this.isDiamond = !this.isDiamond;
   }
   activeBtn14() {
-    this.isActive14 = !this.isActive14;
+    this.isMaster = !this.isMaster;
   }
   activeBtn15() {
-    this.isActive15 = !this.isActive15;
+    this.isChallenger = !this.isChallenger;
   }
 
   // characterBtn(character) {

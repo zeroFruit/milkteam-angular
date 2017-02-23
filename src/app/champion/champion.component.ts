@@ -28,4 +28,13 @@ export class ChampionComponent implements OnInit {
 
   ngOnInit() {}
 
+
+  /**
+   * 챔피언 클릭시 input 추가 함수
+   * @author 정현
+  */
+  selectChamp(name) {
+    this.myChampion = name;
+  }
+
 }
