@@ -1,12 +1,16 @@
 export class RandomChatting {
   _id: string;
-  nickname: string;
-  message: string;
+  displayName: string;
+  msg: string;
+  date: string;
+  from: string;
   picture: string;
 
-  constructor(nickname: string, message: string, picture: string) {
-    this.nickname = nickname;
-    this.message = message;
+  constructor(displayName: string, msg: string, date: string, from?: string, picture?: string) {
+    this.displayName = displayName;
+    this.msg = msg;
+    this.date = date;
+    this.from = from;
     this.picture = picture;
   }
 }

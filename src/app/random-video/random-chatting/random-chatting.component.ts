@@ -11,13 +11,13 @@ import { RandomChatting } from "../../modal/random-chatting.model";
   styleUrls  : ['random-chatting.component.scss']
 })
 export class RandomChattingComponent {
-  @Input() chattings: RandomChatting[] = [];
+  @Input() chattings: RandomChatting[];
   @Output() chatClicked = new EventEmitter<string>();
 
   onChat(message: string){
     console.log(message);
     this.chatClicked.emit(message);
-    console.log(this.chattings);
-    this.chattings.push(new RandomChatting('Angular', message, '#'));
+    //console.log(this.chattings);
+    //this.chattings.push(new RandomChatting('Angular', message, '#'));
   }
 }

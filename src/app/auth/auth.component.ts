@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls  : ['auth.component.scss']
 })
 export class AuthComponent {
-
+  constructor() {
+    if(localStorage.getItem('tokens')){
+      alert("이미 로그인 되었습니다.");
+      location.href = '/main';
+    }
+  }
 }

@@ -34,6 +34,8 @@ import { AuthService } from "./auth/auth.service";
 // Import Pipe
 import { ChampionPipe } from './champion/champion.pipe';
 
+// 동균이 추가 모듈
+import { UploadService } from "./upload/upload.service";
 
 @NgModule({
   imports     : [
@@ -72,7 +74,8 @@ import { ChampionPipe } from './champion/champion.pipe';
   ],
   providers   : [
     RandomVideoService,
-    AuthService
+    AuthService,
+    UploadService
   ],
   declarations: [
     AppComponent,
