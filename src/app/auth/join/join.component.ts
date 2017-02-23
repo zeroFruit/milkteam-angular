@@ -7,7 +7,7 @@ import { AuthService } from "../auth.service";
 @Component({
   selector: 'join',
   templateUrl: 'join.component.html',
-  styleUrls: ['join.component.scss']
+  styleUrls: ['../../app.component.scss', '../auth.component.scss']
 })
 export class JoinComponent {
   constructor(private authService: AuthService) {}

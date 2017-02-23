@@ -1,4 +1,23 @@
-<div class="join">
+<section class="login_card reg">
+  <div class="card_title"><h2>계정 생성</h2></div>
+  <div class="card_input">
+    <input type="email" placeholder="이메일 주소 입력" #email />
+    <input type="password" placeholder="비밀번호 입력" #password />
+    <input type="password" placeholder="비밀번호 입력" #password2 />
+    <input type="text" placeholder="닉네임 입력" #nickname />
+    <div class="agreement">
+      <span>LEGEND TV 계정을 만들면 사용약관 및 개인정보 취급 방침에 동의하는 것입니다.</span>
+    </div>
+  </div>
+  <div class="card_bottom">
+    <button class="bottom_btn" (click)="join(email.value, password.value, password2.value, nickname.value)">
+      <span>계정 만들기</span>
+    </button>
+  </div>
+</section>
+
+<!-- 동균코드 -->
+<!-- <div class="join">
   <div class="text-join box-header">
     계정 생성
   </div>
@@ -22,4 +41,4 @@
   <div class="wrapper-join-btn box-footer">
     <button (click)="join(email.value, password.value, password2.value, nickname.value)">계정 만들기</button>
   </div>
-</div>
+</div> -->

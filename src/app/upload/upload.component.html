@@ -6,10 +6,10 @@
     </div>
     <div class="upload_content_wrap">
       <div class="video_type">
-        <button class="video mad target" value="mad" (click)="toggleBtn('mad')" [ngClass]="{active: type=='mad'}">
+        <button class="video mad target" value="mad" (click)="toggleBtn('mad')" [ngClass]="{active: video.type=='mad'}">
           <span>매드무비</span>
         </button>
-        <button class="video dead target" value="dead" (click)="toggleBtn('dead')" [ngClass]="{active: type=='dead'}">
+        <button class="video dead target" value="dead" (click)="toggleBtn('dead')" [ngClass]="{active: video.type=='dead'}">
           <span>데드무비</span>
         </button>
       </div>

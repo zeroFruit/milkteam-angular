@@ -1,4 +1,23 @@
-<div class="login">
+
+<section class="login_card log">
+  <div class="card_title"><h2>LOGIN</h2></div>
+  <div class="card_input">
+    <input type="email" placeholder="이메일 주소 입력" #email />
+    <input type="password" placeholder="비밀번호 입력" #password/>
+    <button class="login_btn" (click)="login(email.value, password.value)">
+      <span>로그인</span>
+    </button>
+  </div>
+  <div class="card_bottom">
+    <button class="bottom_btn">
+      <span>facebook으로 로그인하기</span>
+    </button>
+  </div>
+</section>
+
+
+<!-- 동균코드 -->
+<!-- <div class="login">
   <div class="text-login box-header">
     LOGIN
   </div>
@@ -14,4 +33,4 @@
   <div class="social-login box-footer">
     <button class="btn-round">facebook으로 로그인 하기</button>
   </div>
-</div>
+</div> -->
