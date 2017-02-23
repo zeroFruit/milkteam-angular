@@ -2,77 +2,87 @@
   <div class="border">
     <div class="text-upload">영상 업로드</div>
     <div class="wrapper-btn-type">
-      <button class="btn btn-mad" value="mad" (click)="toggleBtn('mad')" [ngClass]="{active: type=='mad'}">매드무비</button>
-      <button class="btn btn-dead" value="dead" (click)="toggleBtn('dead')" [ngClass]="{active: type=='dead'}">데드무비</button>
+      <button class="btn btn-mad" value="mad"
+              (click)="toggleBtn('mad')"
+              [ngClass]="{active: video.type=='mad'}"
+      >매드무비</button>
+      <button class="btn btn-dead" value="dead"
+              (click)="toggleBtn('dead')"
+              [ngClass]="{active: video.type=='dead'}"
+      >데드무비</button>
     </div>
     <div class="wrapper-champions">
       <div class="wrapper-label">
         <span class="label">챔프 선택</span>
         <span class="label-sub">(영상의 주인공이 되는 챔프를 선택해주세요.)</span>
       </div>
-      <input type="text">
+      <!--(change)="setVideo('champion', $event)"-->
+      <input type="text" [(ngModel)]="video.champion">
     </div>
     <div class="wrapper-title">
       <div class="wrapper-label">
         <span class="label">제목</span>
         <span class="label-sub">(0/20)</span>
       </div>
-      <input type="text">
+      <input type="text" [(ngModel)]="video.title">
     </div>
     <div class="wrapper-desc">
       <div class="wrapper-label">
         <span class="label">내용</span>
       </div>
-      <textarea></textarea>
+      <textarea [(ngModel)]="video.desc"></textarea>
     </div>
     <div class="wrapper-video-url">
       <div class="wrapper-label">
         <span class="label">유투브 영상 URL</span>
       </div>
-      <input type="text">
+      <input type="text" [(ngModel)]="video.url">
     </div>
     <div class="wrapper-position">
       <div class="wrapper-label">
         <span class="label">포지션</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="top"><span class="label">탑</span>
+        <input type="radio" name="radio-position" value="top" [(ngModel)]="video.position"><span class="label">탑</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="mid"><span class="label">미드</span>
+        <input type="radio" name="radio-position" value="mid" [(ngModel)]="video.position"><span class="label">미드</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="deal"><span class="label">원딜</span>
+        <input type="radio" name="radio-position" value="deal" [(ngModel)]="video.position"><span class="label">원딜</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="sup"><span class="label">서폿</span>
+        <input type="radio" name="radio-position" value="sup" [(ngModel)]="video.position"><span class="label">서폿</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="jun"><span class="label">정글</span>
+        <input type="radio" name="radio-position" value="jun" [(ngModel)]="video.position"><span class="label">정글</span>
       </div>
     </div>
     <div class="wrapper-tier">
       <span class="wrapper-label">티어</span>
-      <select>
-        <option>챌린저</option>
-        <option>마스터</option>
-        <option>다이아</option>
-        <option>플레티넘</option>
-        <option>골드</option>
-        <option>실버</option>
-        <option>브론즈</option>
+      <select [(ngModel)]="video.tier">
+        <option value="challenger">챌린저</option>
+        <option value="master">마스터</option>
+        <option value="diamond">다이아</option>
+        <option value="platinum">플레티넘</option>
+        <option value="gold">골드</option>
+        <option value="silver">실버</option>
+        <option value="bronze">브론즈</option>
       </select>
     </div>
-    <div class="wrapper-char">
+    <div class="wrapper-attribute">
       <div class="wrapper-label">
         <span class="label">특성</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-char" value="ad"><span class="label">AD</span>
+        <input type="radio" name="radio-attribute" value="ad" [(ngModel)]="video.attribute"><span class="label">AD</span>
       </div>
       <div class="wrapper-radio">
-        <input type="radio" name="radio-char" value="ap"><span class="label">AP</span>
+        <input type="radio" name="radio-attribute" value="ap" [(ngModel)]="video.attribute"><span class="label">AP</span>
       </div>
+    </div>
+    <div class="wrapper-submit">
+      <button (click)="upload()">완료</button>
     </div>
   </div>
 </div>

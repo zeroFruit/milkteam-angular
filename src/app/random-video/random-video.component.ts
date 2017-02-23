@@ -17,9 +17,12 @@ export class RandomVideoComponent implements OnInit {
   video: Video;
   //videoId = "GPexqi3flNM";
 
-  private test: string = "test";
-
-  constructor(private randomVideoService: RandomVideoService) {}
+  constructor(private randomVideoService: RandomVideoService) {
+    this.randomVideoService.joinRandomChatting('GPexqi3flNM');
+    this.randomVideoService.getEventListener().subscribe(event => {
+        this.chattings.push(event);
+    });
+  }
 
   ngOnInit() {
     // this.randomVideoService.getVideo().then(video => {
@@ -34,18 +37,6 @@ export class RandomVideoComponent implements OnInit {
   }
 
   chatClicked(message: string) {
-    console.log(this.test);
     this.randomVideoService.chat(message);
-  }
-
-  socket() {
-
-    this.randomVideoService.joinRandomChatting('GPexqi3flNM', this.test);
-
-    this.randomVideoService.getEventListener().subscribe(event => {
-      if(event.type == "newMessage") {
-        this.chattings.push(event.data);
-      }
-    });
   }
 }

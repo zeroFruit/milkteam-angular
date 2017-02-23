@@ -3,8 +3,8 @@
     <div class="chatting" *ngFor="let chatting of chattings">
       <div class="wrapper-picture" [ngStyle]="{'background-image': 'url('+chatting.picture+')'}"></div>
       <div class="wrapper-content">
-        <div class="nickname">{{ chatting.nickname }}</div>
-        <div class="message">{{ chatting.message }}</div>
+        <div class="nickname">{{ chatting.displayName }}</div>
+        <div class="message">{{ chatting.msg }}</div>
       </div>
     </div>
   </div>

@@ -26,6 +26,7 @@ import { FindPwComponent } from "./auth/find-pw/find-pw.component";
 import { AuthService } from "./auth/auth.service";
 import { HttpModule } from "@angular/http";
 import { UploadComponent } from "./upload/upload.component";
+import { UploadService } from "./upload/upload.service";
 
 @NgModule({
   imports     : [
@@ -60,7 +61,8 @@ import { UploadComponent } from "./upload/upload.component";
   ],
   providers   : [
     RandomVideoService,
-    AuthService
+    AuthService,
+    UploadService
   ],
   declarations: [
     AppComponent,
