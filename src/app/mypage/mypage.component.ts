@@ -12,7 +12,7 @@ export class MypageComponent {
 }
 
 // jquery 어떻게 쓰지...
-
+// 파일을 입력하면 파일명이 입력되는 함수
 // $(document).ready(function(){ var fileTarget = $('.profile_search .upload-hidden');
 //   fileTarget.on('change', function(){ // 값이 변경되면
 //   if(window.FileReader){
