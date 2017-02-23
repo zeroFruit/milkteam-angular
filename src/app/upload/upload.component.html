@@ -1,78 +1,104 @@
-<div class="upload">
-  <div class="border">
-    <div class="text-upload">영상 업로드</div>
-    <div class="wrapper-btn-type">
-      <button class="btn btn-mad" value="mad" (click)="toggleBtn('mad')" [ngClass]="{active: type=='mad'}">매드무비</button>
-      <button class="btn btn-dead" value="dead" (click)="toggleBtn('dead')" [ngClass]="{active: type=='dead'}">데드무비</button>
+<div class="container">
+  <section class="upload">
+    <div class="upload_title">
+      <h1>영상업로드</h1>
     </div>
-    <div class="wrapper-champions">
-      <div class="wrapper-label">
-        <span class="label">챔프 선택</span>
-        <span class="label-sub">(영상의 주인공이 되는 챔프를 선택해주세요.)</span>
+    <div class="upload_content_wrap">
+      <div class="video_type">
+        <button class="video mad target" value="mad" (click)="toggleBtn('mad')" [ngClass]="{active: type=='mad'}">
+          <span>매드무비</span>
+        </button>
+        <button class="video dead target" value="dead" (click)="toggleBtn('dead')" [ngClass]="{active: type=='dead'}">
+          <span>데드무비</span>
+        </button>
       </div>
-      <input type="text">
+      <div class="champ_select">
+        <div class="br br1">
+          <h2>챔프선택</h2>
+          <span>(영상의 주인공이 되는 챔프를 선택해주세요)</span>
+        </div>
+        <div class="br br2">
+          <input type="text" placeholder="챔프를 입력하세요.">
+        </div>
+      </div>
+      <div class="video_title">
+        <div class="br br1">
+          <h2>제목</h2><span>(0/20)</span>
+        </div>
+        <div class="br br2">
+          <input type="text"  placeholder="제목은 20자 이내로 작성해주세요."/>
+        </div>
+      </div>
+      <div class="video_content">
+        <div class="br br1">
+          <h2>내용</h2>
+        </div>
+        <div class="br br2">
+          <textarea class="style-1" placeholder="영상을 잘 표현할 수 있는 내용을 입력해 주세요."></textarea>
+        </div>
+      </div>
+      <div class="video_url">
+        <div class="br br1">
+          <h2>유투브 영상 URL</h2>
+        </div>
+        <div class="br br2">
+          <input type="text" placeholder="유투브 영상주소를 입력해주세요."/>
+        </div>
+      </div>
+      <div class="position">
+        <div class="br br1">
+          <h2>포지션</h2>
+        </div>
+        <div class="br br2">
+          <div class="pos_wrap">
+            <input name="position" type='radio' id='top'/>
+            <label for='top'><span></span>탑</label>
+            <input name="position" type='radio' id='mid'/>
+            <label for='mid'><span></span>미드</label>
+            <input name="position" type='radio' id='deal'/>
+            <label for='deal'><span></span>원딜</label>
+            <input name="position" type='radio' id='sup'/>
+            <label for='sup'><span></span>서폿</label>
+            <input name="position" type='radio' id='jungle'/>
+            <label for='jungle'><span></span>정글</label>
+          </div>
+        </div>
+      </div>
+      <div class="video_tier">
+        <div class="br br1">
+          <h2>티어</h2>
+        </div>
+        <div class="br br2">
+          <select>
+            <option disabled selected>티어선택</option>
+            <option>언랭</option>
+            <option>실버</option>
+            <option>플래티넘</option>
+            <option>마스터</option>
+            <option>브론즈</option>
+            <option>골드</option>
+            <option>다이아</option>
+            <option>챌린저</option>
+          </select>
+        </div>
+      </div>
+      <div class="type">
+        <div class="br br1">
+          <h2>특성</h2>
+        </div>
+        <div class="br br2">
+          <input name="type" type='radio' id='ap'/>
+          <label for='ap'><span></span>AP</label>
+          <input name="type" type='radio' id='ad'/>
+          <label for='ad'><span></span>AD</label>
+        </div>
+      </div>
     </div>
-    <div class="wrapper-title">
-      <div class="wrapper-label">
-        <span class="label">제목</span>
-        <span class="label-sub">(0/20)</span>
-      </div>
-      <input type="text">
-    </div>
-    <div class="wrapper-desc">
-      <div class="wrapper-label">
-        <span class="label">내용</span>
-      </div>
-      <textarea></textarea>
-    </div>
-    <div class="wrapper-video-url">
-      <div class="wrapper-label">
-        <span class="label">유투브 영상 URL</span>
-      </div>
-      <input type="text">
-    </div>
-    <div class="wrapper-position">
-      <div class="wrapper-label">
-        <span class="label">포지션</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="top"><span class="label">탑</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="mid"><span class="label">미드</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="deal"><span class="label">원딜</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="sup"><span class="label">서폿</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-position" value="jun"><span class="label">정글</span>
-      </div>
-    </div>
-    <div class="wrapper-tier">
-      <span class="wrapper-label">티어</span>
-      <select>
-        <option>챌린저</option>
-        <option>마스터</option>
-        <option>다이아</option>
-        <option>플레티넘</option>
-        <option>골드</option>
-        <option>실버</option>
-        <option>브론즈</option>
-      </select>
-    </div>
-    <div class="wrapper-char">
-      <div class="wrapper-label">
-        <span class="label">특성</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-char" value="ad"><span class="label">AD</span>
-      </div>
-      <div class="wrapper-radio">
-        <input type="radio" name="radio-char" value="ap"><span class="label">AP</span>
-      </div>
-    </div>
+    <button class="confirm_btn">
+      <h2>완료</h2>
+    </button>
+  </section>
+  <div class="close_btn">
+    <img src="/public/images/button-x.png" alt="닫기버튼">
   </div>
 </div>

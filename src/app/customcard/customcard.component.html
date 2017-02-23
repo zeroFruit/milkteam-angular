@@ -1,48 +1,97 @@
-<!--component html goes here -->
-<div class="card-wrap">
-  <div class="card cha">
-    <span class="title">CHARACTER</span>
-    <div class="cha-button-wrap">
-      <div class="cha-button ap">
-        <span class="cha-verticle-center-text">AP</span>
-      </div>
-      <div class="cha-button ad">
-        <span class="cha-verticle-center-text">AD</span>
-      </div>
+<div class="container">
+  <section class="customizing">
+    <div class="card_wrap char_wrap">
+      <article class="card character">
+        <div class="card_title"><h2>CHARACTER</h2></div>
+        <div class="card_btns">
+          <button class="char_btn ap_btn" value="ap" (click)="activeBtn1()" [ngClass]="{active: isActive1}">
+            <span class="char_text">AP</span>
+          </button>
+          <button class="char_btn ad_btn" value="ad" (click)="activeBtn2()" [ngClass]="{active: isActive2}">
+            <span class="char_text">AD</span>
+          </button>
+        </div>
+        <div class="card_desc">Click the champion character you <br />want to see! Or you can skip this step.</div>
+      </article>
     </div>
-    <span class="desc desc1">Click the champion character you<br /> want to see! Or you can skip this step.</span>
-  </div>
-  <div class="card position">
-    <span class="title">POSITION</span>
-    <div class="po-button-wrap">
-      <div class="po-button">
-        <span class="po-verticle-center-text">TOP</span>
-      </div>
-      <div class="po-button po-top mid">
-        <span class="po-verticle-center-text">JUNGLE</span>
-      </div>
-      <div class="po-button po-top right">
-        <span class="po-verticle-center-text">MID</span>
-      </div>
-      <div class="po-button po-top mid">
-        <span class="po-verticle-center-text">DEALER</span>
-      </div>
-      <div class="po-button po-top right">
-        <span class="po-verticle-center-text">SUPPORT</span>
-      </div>
+    <div class="card_wrap po_wrap">
+      <article class="card position">
+        <div class="card_title"><h2>POSITION</h2></div>
+        <div class="card_btns">
+          <div class="left_btn">
+            <button class="po_btn" value="top" (click)="activeBtn3()" [ngClass]="{active: isActive3}">
+              <span class="po_text">TOP</span>
+            </button>
+          </div>
+          <div class="cen_btn">
+            <button class="po_btn" value="jungle" (click)="activeBtn4()" [ngClass]="{active: isActive4}">
+              <span class="po_text">JUNGLE</span>
+            </button>
+          </div>
+          <div class="right_btn">
+            <button class="po_btn" value="mid" (click)="activeBtn5()" [ngClass]="{active:isActive5}">
+              <span class="po_text">MID</span>
+            </button>
+          </div>
+          <div class="cen_btn">
+            <button class="po_btn" value="dealer" (click)="activeBtn6()" [ngClass]="{active: isActive6}">
+              <span class="po_text">DEALER</span>
+            </button>
+          </div>
+          <div class="right_btn">
+            <button class="po_btn" value="sup" (click)="activeBtn7()" [ngClass]="{active: isActive7}">
+              <span class="po_text">SUPPORT</span>
+            </button>
+          </div>
+        </div>
+        <div class="card_desc">Click the champion character you <br />want to see! Or you can skip this step.</div>
+      </article>
+        <button class="save_btn">
+          <span>저장</span>
+        </button>
     </div>
-    <span class="desc desc2">Click the champion character you<br /> want to see! Or you can skip this step.</span>
-  </div>
-  <div class="card tier">
-    <span class="title">TIER</span>
-    <div class="tier-button-wrap">
-      <div class="tier-btn unranked">
-        <span class="po-verticle-center-text">UNRANKED</span>
+    <div class="card_wrap tier_wrap">
+      <div class="pass_btn">
+        <span>건너뛰기</span><img src="/public/images/arrow_right.png" alt="right arrow">
       </div>
-      <div class="tier-btn bronze">
-        <span class="po-verticle-center-text">BRONZE</span>
-      </div>
+      <article class="card tier">
+        <div class="card_title"><h2>TIER</h2></div>
+        <div class="card_btns">
+          <div class="tier_wrap lv1">
+            <button class="tier_btn unranked" value="unranked" (click)="activeBtn8()" [ngClass]="{active: isActive8}">
+              <span>UNRANKED</span>
+            </button>
+            <button class="tier_btn bronze" value="bronze" (click)="activeBtn9()" [ngClass]="{active: isActive9}">
+              <span>BRONZE</span>
+            </button>
+          </div>
+          <div class="tier_wrap lv2">
+            <button class="tier_btn silver" value="silver" (click)="activeBtn10()" [ngClass]="{active: isActive10}">
+              <span>SILVER</span>
+            </button>
+            <button class="tier_btn gold" value="gold" (click)="activeBtn11()" [ngClass]="{active: isActive11}">
+              <span>GOLD</span>
+            </button>
+            <button class="tier_btn platinum" value="platinum" (click)="activeBtn12()" [ngClass]="{active: isActive12}">
+              <span>PLATINUM</span>
+            </button>
+          </div>
+          <div class="tier_wrap lv3">
+            <button class="tier_btn diamond" value="diamond" (click)="activeBtn13()" [ngClass]="{active: isActive13}">
+              <span>DIAMOND</span>
+            </button>
+            <button class="tier_btn master" value="master" (click)="activeBtn14()" [ngClass]="{active: isActive14}">
+              <span>MASTER</span>
+            </button>
+          </div>
+          <div class="tier_wrap lv4">
+            <button class="tier_btn challenger" value="challenger" (click)="activeBtn15()" [ngClass]="{active: isActive15}">
+              <span>CHALLENGER</span>
+            </button>
+          </div>
+        </div>
+        <div class="card_desc">Click the champion character you <br />want to see! Or you can skip this step.</div>
+      </article>
     </div>
-    <span class="desc">Click the champion character you<br /> want to see! Or you can skip this step.</span>
-  </div>
+  </section>
 </div>

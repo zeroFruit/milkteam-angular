@@ -1,0 +1,378 @@
+.container {
+}
+
+.mypage{
+  width: 100%;
+  display: flex;
+  padding-top: 106px;
+}
+
+.profile_admin{
+  width: 35%;
+  padding-right: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pa_wrap {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #979797;
+}
+
+.pa_wrap > h2 {
+  margin: 0;
+  margin-left: 20px;
+  font-family: SpoqaHanSans;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pa_wrap_2 {
+  margin-top: 50px;
+  padding: 0 18px;
+}
+
+.nick_change {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.nick_change > span {
+  min-width: 133px;
+  width: 34%;
+  font-family: SpoqaHanSans;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nick_change > input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #ffffff;
+  color: #efefef;
+  width: 66%;
+  padding: 0 17px;
+}
+
+.profile_text {
+  margin-top: 50px;
+}
+
+.profile_text > span {
+  min-width: 133px;
+  font-family: SpoqaHanSans;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profile_input {
+  display: flex;
+  margin-top: 35px;
+}
+
+.profile_pic {
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 36px;
+}
+
+.profile_pic {
+  width: 34%;
+}
+
+.profile_search {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search_btn {
+  width:100%;
+  height: 39px;
+  border-radius: 19.5px;
+  border: solid 1px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_btn > span {
+  font-family: SpoqaHanSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a4a4a4;
+}
+
+.file_address {
+  width:100%;
+  height: 39px;
+  border-radius: 19.5px;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: SpoqaHanSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.5;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 21px;
+}
+
+/* file input style*/
+.profile_search input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+.profile_search label {
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* named upload */
+
+.profile_search .file_address {
+  /* label의 패딩값과 일치 */
+  vertical-align: middle;
+  -webkit-appearance: none;
+  /* 네이티브 외형 감추기 */
+   -moz-appearance: none;
+   appearance: none;
+}
+
+
+.save_btn {
+  width: 100%;
+  height: 60px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border: none;
+  outline: none;
+}
+
+.save_btn > span {
+  font-family: SpoqaHanSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.pa_text2{
+  margin-top:30px;
+}
+
+.pa_wrap_3{
+  width: 100%;
+  display: flex;
+  padding: 50px 66px;
+}
+
+.pa_wrap_3 > span {
+  font-family: SpoqaHanSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  color: rgba(239, 239, 239, 0.5);
+}
+
+.pa_wrap_4 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unsub_btn {
+  width: 60%;
+  height:39px;
+  border-radius: 19.5px;
+  background-color: #a4a4a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+.unsub_btn > span {
+  font-family: SpoqaHanSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.my_video{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.my_video > .pa_wrap > img {
+  height: 24px;
+}
+
+.videos_wrap{
+  border-bottom: solid 1px #979797;
+  padding-bottom: 5px;
+}
+
+.scrollbar
+{
+	height: 680px;
+	overflow-y: scroll;
+  padding-right:20px;
+}
+
+.force-overflow
+{
+	min-height: 100%inherit;
+}
+
+.style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0);
+	border-radius: 10px;
+}
+
+.style-1::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+.style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0);
+	background-color: #555;
+}
+
+.card_row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.video_card{
+  position: relative;
+  width:210px;
+  height: 245px;
+  border-radius: 3px;
+  background-color: #fafafa;
+  margin: 20px 25px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.preview {
+  height: 151px;
+  background-image:url(http://cfile23.uf.tistory.com/image/2576AD475688EEB320CE89);
+  background-size: cover;
+}
+
+
+.title {
+  width: 100%;
+  height: 28px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 10px;
+}
+
+.title > span {
+  font-family: SpoqaHanSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  color: #a4a4a4;
+}
+
+.total > span {
+  font-family: SpoqaHanSans;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  color: #a4a4a4;
+}
+
+.viewlike {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sticker{
+  position: absolute;
+  right:3px;
+  top:-3px;
+}

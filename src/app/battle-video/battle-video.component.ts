@@ -4,7 +4,7 @@ import { BattleVideoService } from "./battle-video.service";
 @Component({
     selector: 'battle-video',
     templateUrl: 'battle-video.component.html',
-    styleUrls: ['battle-video.component.scss'],
+    styleUrls: ['../app.component.scss', 'battle-video.component.css' ],
     providers: [BattleVideoService]
 })
 export class BattleVideoComponent implements OnInit {

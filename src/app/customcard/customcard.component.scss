@@ -1,24 +1,39 @@
-// component css goes here
-.card-wrap{
-  font-size: 0px;
-  text-align: center;
-  margin-top:230px;
+/* customizing*/
+
+.customizing {
+  height: 100vh;
+  width:70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
+
+.card_wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 .card {
   width:383px;
   height:620px;
-  background-color: #000;
-  display: inline-block;
-  vertical-align: top;
-}
-.position {
-  margin-left:75px;
+  background-color: black;
+  text-align: center;
+  color:#ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 15px;
 }
 
-.tier {
-  margin-left:75px;
+.card_title {
+  height:17%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-.title{
+
+.card_title > h2 {
   font-family: SpoqaHanSans;
   font-size: 30px;
   font-weight: bold;
@@ -28,11 +43,10 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  display: block;
-  margin-top:70px;
 }
-.desc{
-  display: block;
+
+.card_desc {
+  height:17%;
   font-family: SpoqaHanSans;
   font-size: 18px;
   font-weight: normal;
@@ -40,24 +54,47 @@
   font-stretch: normal;
   line-height: 1.56;
   letter-spacing: normal;
-  text-align: center;
   color: rgba(255, 255, 255, 0.5);
-}
-.desc1{
-  margin-top:126px;
-}
-.desc2{
-  margin-top:54px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.cha-button-wrap{
-  margin-top:126px;
-  margin-left: 54px;
+.is_btn_clicked{
+  background-color: #4369ff !important;
 }
-.cha-button {
-  text-align: center;
-  width:276px;
-  height:54px;
+
+button:target {
+  border: solid 1px #4369ff;
+  background-color: #4369ff;
+}
+
+button.active {
+  border: solid 1px #4369ff;
+  background-color: #4369ff;
+}
+
+.card_btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.character > .card_btns {
+  align-items: center;
+}
+
+.char_btn {
+  width:72%;
+  height:50px;
+  margin: 25px 0px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.char_text{
   font-family: SpoqaHanSans;
   font-size: 20px;
   font-weight: bold;
@@ -67,25 +104,44 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 54px;
 }
-.cha-verticle-center-text{
-  height: 52px;
-  line-height: 52px;
+
+.position > .card_btns {
+  padding-left: 34px;
+  padding-right: 34px;
 }
-.ad{
-  margin-top:50px;
+
+.po_wrap{
+  justify-content: center;
 }
-.po-button-wrap{
-  margin-top:53px;
-  margin-left:34px;
-}
-.po-button{
+
+.po_btn {
   width:196px;
   height:47px;
-  border-radius: 47px;
+  margin: 7.5px 0px;
   background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_btns > .left_btn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card_btns > .cen_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.card_btns > .right_btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.po_text {
   font-family: SpoqaHanSans;
   font-size: 18px;
   font-weight: bold;
@@ -96,26 +152,23 @@
   text-align: center;
   color: #ffffff;
 }
-.po-top{margin-top:17px;}
-.po-verticle-center-text{
-  height: 47px;
-  line-height: 47px;
+
+.tier_wrap {
+  display: flex;
+  margin: 12.5px 0;
 }
-.mid{
-  margin-left:54px;
-}
-.right{
-  margin-left:119px;
-}
-.tier-button-wrap{
-  margin-left:22px;
-  margin-top:73px;
-}
-.tier-btn{
-  display: inline-block;
-  border-radius: 47px;
-  height:47px;
+
+.tier_btn {
   background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.tier_btn > span {
   font-family: SpoqaHanSans;
   font-size: 14px;
   font-weight: bold;
@@ -126,5 +179,97 @@
   text-align: center;
   color: #ffffff;
 }
-.unranked{width:110px;margin-left: 38px;}
-.bronze{width:104px;margin-left: 15px;}
+
+.lv1 {
+  padding-left: 45px;
+}
+
+.lv2{
+  padding-left: 7px;
+}
+
+.lv3{
+  padding-left: 79px;
+}
+
+.lv4{
+  padding-left: 140px;
+}
+
+.unranked {
+  width: 110px;
+}
+
+.bronze {
+  width: 104px;
+}
+
+.silver {
+  width: 104px;
+}
+
+.gold {
+  width: 95px;
+}
+
+.platinum {
+  width: 110px;
+}
+
+.diamond {
+  width: 110px;
+}
+
+.master {
+  width: 104px;
+}
+
+.challenger {
+  width: 130px;
+}
+
+
+.save_btn{
+  width:220px;
+  height: 54px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  position: absolute;
+  bottom:70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.save_btn > span{
+  font-family: AppleSDGothicNeo;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.pass_btn{
+  position: absolute;
+  top:100px;
+  right:0;
+  display: flex;
+  align-items: center;
+}
+
+.pass_btn > span {
+  font-family: AppleSDGothicNeo;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-right: 35px;
+}

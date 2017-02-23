@@ -24,6 +24,8 @@ import { JoinComponent } from "./auth/join/join.component";
 import { FindPwComponent } from "./auth/find-pw/find-pw.component";
 import { UploadComponent } from './upload/upload.component';
 import { ChampionComponent } from './champion/champion.component';
+import { MypageComponent } from './mypage/mypage.component';
+
 
 // Import Services
 import { RandomVideoService } from "./random-video/random-video.service";
@@ -62,6 +64,9 @@ import { ChampionPipe } from './champion/champion.pipe';
       }, {
         path     : 'upload',
         component: UploadComponent
+      }, {
+        path     : 'mypage',
+        component: MypageComponent
       }
     ])
   ],
@@ -82,6 +87,8 @@ import { ChampionPipe } from './champion/champion.pipe';
     CustomcardComponent,
     ChampionComponent,
     ChampionPipe,
+    // Mypage
+    MypageComponent,
     //Auth
     AuthComponent,
     LoginComponent,

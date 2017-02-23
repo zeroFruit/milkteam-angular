@@ -5,13 +5,60 @@
   -webkit-box-sizing: border-box;
 }
 
-.container {
-  position: relative;
-  width: 1080px;
-  height: 603px;
-  // width:100%;
-  // height:100%;
+
+body {
+  background-image: url("/public/images/back.jpg");
+  background-size: cover;
+  margin: 0;
 }
+
+
+li {
+  list-style-type: none;
+}
+
+input:focus {
+    outline:none;
+}
+
+
+input {
+  border-style:solid;
+  border-color: rgba(0,0,0,0);
+}
+
+
+textarea:focus {
+    outline:none;
+}
+
+textarea {
+  border-style:solid;
+  border-color: rgba(0,0,0,0);
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+
+.container{
+  width:100%;
+  min-width:1200px;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.hidden-title{
+  font-size: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
 /*
 동영상 16:9 사이즈
 2160p: 3840x2160
