@@ -9,6 +9,13 @@ import { Router } from "@angular/router";
 export class NavComponent {
   selected: string;
   dropDown: Boolean = true;
+  switchChecked: boolean = false;
+
+  constructor(private router: Router) {
+    if(router.url === '/battle') {
+      this.switchChecked = true;
+    }
+  }
 
   onSelected(position) {
     this.selected = position;
@@ -16,9 +23,6 @@ export class NavComponent {
 
   dropSelect() {
     this.dropDown = !this.dropDown;
-  }
-
-  constructor(private router: Router) {
   }
 
   goPage(page: string) {
