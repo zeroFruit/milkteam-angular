@@ -5,6 +5,7 @@
   max-width: 1920px;
   min-width: 1200px;
   position: relative;
+  padding: 0 30px;
 }
 
 .battle_wrap:first-of-type {
@@ -18,7 +19,7 @@
 }
 
 .videos_title {
-  width: 73%;
+  width: 80%;
   display: flex;
   align-items: center;
 }
@@ -38,7 +39,7 @@
 }
 
 .viewlike {
-  width: 25%;
+  width: 20%;
   display: flex;
   align-items: center;
 }
@@ -60,10 +61,10 @@
 }
 
 .battle_video {
-  width: calc(100% - 340px);
+  width: 80%;
   display: flex;
   flex-direction: column;
-  border-bottom: solid 1px #ffffff;
+  padding-right: 20px;
 }
 
 .bw2 {
@@ -101,7 +102,7 @@ lol-video {
 
 .voting {
   display: flex;
-  width: 100%;
+  width: 75%;
   justify-content: space-between;
   align-items: center;
   padding-left: 30px;
@@ -163,16 +164,16 @@ lol-video {
 /* info */
 .infos {
   display: flex;
-  border-top: solid 1px #ffffff;
+  border-top: solid 1px rgba(255, 255, 255,0.2);
   justify-content: space-between;
   flex-grow: 1;
+  border-bottom: solid 1px rgba(255, 255, 255,0.2);
 }
 
 .scrollbar {
-  height: calc(100% - 95px);
+  height: 100px;
   overflow-y: scroll;
   padding-right: 20px;
-  padding-bottom: 20px;
 }
 
 .force-overflow {
@@ -233,8 +234,8 @@ lol-video {
 .i_title {
   display: flex;
   align-items: center;
-  height: 45px;
-  margin: 35px 0 15px 0;
+  height: 30%;
+  margin: 10px 0;
   font-family: SpoqaHanSans;
   font-size: 24px;
   font-weight: normal;
@@ -251,7 +252,7 @@ lol-video {
 }
 
 battle-chating {
-  width: 340px;
+  width: 20%;
 }
 
 /* footer */
@@ -260,20 +261,12 @@ battle-chating {
   width: 100%;
   height: 70px;
   background-color: #282828;
-}
-
-.footer > .container {
-  position: relative;
+  padding: 0 50px;
   min-height: 100%;
-  width: 100%;
+  max-width: 1920px;
   min-width: 1200px;
   display: flex;
   align-items: center;
-}
-
-.footer > * {
-  vertical-align: middle;
-  height: 100%;
 }
 
 .play_control {
@@ -286,14 +279,12 @@ battle-chating {
   letter-spacing: normal;
   text-align: left;
   color: #a4a4a4;
-  width: 73%;
-  display: inline-block;
+  width: 80%;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border-right: 1px solid #a4a4a4;
-  text-align: center;
-  padding: 10px 0;
 }
 
 .play_control > img {
@@ -309,16 +300,10 @@ battle-chating {
 
 .play_control > .play_btn {
   background-image: url(/public/images/button-play.png);
-  display: inline-block;
 }
 
 .play_control > .stop_btn {
   background-image: url(/public/images/button-pause.png);
-  display: inline-block;
-}
-
-.play_control > * {
-  vertical-align: middle;
 }
 
 .prvious_video {
@@ -329,22 +314,11 @@ battle-chating {
 .next_video {
   margin-left: 10px;
   cursor: pointer;
-  vertical-align: middle;
 }
 
 .play_option {
-  width: 26%;
-  display: inline-block;
-  align-items: center;
-  padding: 27px 0;
-}
-
-.play_option > * {
-  display: inline-block;
-}
-
-.play_option > * > * {
-  display: inline-block;
+  width: 20%;
+  display: flex;
 }
 
 .coninuous_wrap {
@@ -363,11 +337,12 @@ battle-chating {
   letter-spacing: normal;
   color: #344cff;
   margin-left: 8px;
+  min-width: 72px;
 }
 
 .continuous_play_img {
   margin-left: 65px;
-  width: 27px;
+  min-width: 27px;
   height: 16px;
 }
 
@@ -403,11 +378,12 @@ battle-chating {
   letter-spacing: normal;
   color: #a4a4a4;
   margin-left: 8px;
+  min-width: 72px;
 }
 
 .random_play_img {
   margin-left: 20px;
-  width: 27px;
+  min-width: 27px;
   height: 16px;
 }
 

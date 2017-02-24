@@ -80,32 +80,34 @@
     ></battle-chating>
   </div>
 
-
-  <footer class="footer">
-    <div class="play_control">
-      <span class="prvious_video">PREVIOUS VIDEO</span>
-      <img src="/public/images/button-previous-video.png" alt>
-      <div class="play" (click)="playBtnClick()" [class.stop_btn]="playStatus" [class.play_btn]="!playStatus"></div>
-      <img src="/public/images/button-next-video.png" alt>
-      <span class="next_video">NEXT VIDEO</span>
-    </div>
-    <div class="play_option">
-      <div class="coninuous_wrap" (click)="continueBtnClick()">
-        <div class="continuous_play_img" [class.continuous_on]="continuousStatus"
-             [class.continuous_off]="!continuousStatus">
-        </div>
-        <span class="continuous_play" [class.continuous_on_text]="continuousStatus"
-              [class.continuous_off_text]="!continuousStatus">연속재생</span>
-      </div>
-      <div class="random_wrap" (click)="randomBtnClick()">
-        <div class="random_play_img" [class.random_on]="randomStatus" [class.random_off]="!randomStatus">
-        </div>
-        <span class="random_play" [class.random_on_text]="randomStatus"
-              [class.random_off_text]="!randomStatus">랜덤재생</span>
-      </div>
-    </div>
-    <div class="history_btn">
-      <img src="/public/images/button-up.png" alt="">
-    </div>
-  </footer>
 </div>
+
+
+
+<footer class="footer">
+  <div class="play_control">
+    <span class="prvious_video">PREVIOUS VIDEO</span>
+    <img src="/public/images/button-previous-video.png" alt>
+    <div class="play" (click)="playBtnClick()" [class.stop_btn]="playStatus" [class.play_btn]="!playStatus"></div>
+    <img src="/public/images/button-next-video.png" alt>
+    <span class="next_video">NEXT VIDEO</span>
+  </div>
+  <div class="play_option">
+    <div class="coninuous_wrap" (click)="continueBtnClick()">
+      <div class="continuous_play_img" [class.continuous_on]="continuousStatus"
+           [class.continuous_off]="!continuousStatus">
+      </div>
+      <span class="continuous_play" [class.continuous_on_text]="continuousStatus"
+            [class.continuous_off_text]="!continuousStatus">연속재생</span>
+    </div>
+    <div class="random_wrap" (click)="randomBtnClick()">
+      <div class="random_play_img" [class.random_on]="randomStatus" [class.random_off]="!randomStatus">
+      </div>
+      <span class="random_play" [class.random_on_text]="randomStatus"
+            [class.random_off_text]="!randomStatus">랜덤재생</span>
+    </div>
+  </div>
+  <div class="history_btn">
+    <img src="/public/images/button-up.png" alt="">
+  </div>
+</footer>
