@@ -31,6 +31,7 @@ import { HistoryComponent } from './history/./history.component';
 import { APP_CONFIG, OPAQUE_TOKEN } from './app.config';
 import { RandomVideoService } from "./random-video/random-video.service";
 import { AuthService } from "./auth/auth.service";
+import { AuthGuard } from './auth/auth-guard.service';
 
 // Import Pipe
 import { ChampionPipe } from './champion/champion.pipe';
@@ -66,10 +67,12 @@ import { UploadService } from "./upload/upload.service";
         component: AuthComponent
       }, {
         path     : 'upload',
-        component: UploadComponent
+        component: UploadComponent,
+        canActivate: [AuthGuard]
       }, {
         path     : 'mypage',
-        component: MypageComponent
+        component: MypageComponent,
+        canActivate: [AuthGuard]
       }, {
         path     : 'history',
         component: HistoryComponent
@@ -80,7 +83,8 @@ import { UploadService } from "./upload/upload.service";
     {provide: OPAQUE_TOKEN, useValue: APP_CONFIG},
     RandomVideoService,
     AuthService,
-    UploadService
+    UploadService,
+    AuthGuard
   ],
   declarations: [
     AppComponent,
