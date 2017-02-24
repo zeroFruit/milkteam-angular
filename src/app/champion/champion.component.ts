@@ -3,7 +3,7 @@
  * @author 김진혁
  * @date 2017-02-21
  */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import championsList from './champions';
 
 @Component({
@@ -14,6 +14,8 @@ import championsList from './champions';
 export class ChampionComponent implements OnInit {
   myChampion: String;
   champions: Object[];
+  @Input() getChampion: String;
+  @Output() getChampionChange = new EventEmitter<String>();
   constructor() {
     this.champions = championsList;
   }
@@ -26,6 +28,13 @@ export class ChampionComponent implements OnInit {
     return `../../../public/images/champions/${enName}.png`;
   }
 
+  /**
+   * 챔피언 change시 바인딩 함수
+   */
+  onChampionChange (newValue) {
+    this.getChampionChange.emit(newValue);
+  }
+
   ngOnInit() {}
 
 
@@ -35,6 +44,7 @@ export class ChampionComponent implements OnInit {
   */
   selectChamp(name) {
     this.myChampion = name;
+    this.onChampionChange(name);
   }
 
 }

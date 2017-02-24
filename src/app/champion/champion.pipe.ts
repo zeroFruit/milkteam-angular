@@ -9,7 +9,7 @@ export class ChampionPipe implements PipeTransform {
     if (!text) return [];
 
     let result = champions.filter((champion) => {
-      return (champion['name'].indexOf(text) !== -1);
+      return (champion['name'].indexOf(text) !== -1 && champion['name'] != text);
     })
     return result;
   }
