@@ -1,18 +1,20 @@
 <header class="header">
+<!-- <<<<<<< HEAD -->
     <div class="header_ele header_left">
-      <h1 class="logo"><img src="/public/images/logo-image.png" alt="Legend TV"/><img class="text_logo" src="/public/images/logo-text.png" alt=""/></h1>
+      <h1 class="logo">
+        <img src="/public/images/logo-image.png" alt="Legend TV" (click)="goPage('/')"/>
+        <img class="text_logo" src="/public/images/logo-text.png" alt="" (click)="goPage('/')"/>
+      </h1>
       <div class="video_switch">
         <label class="switch">
           <input type="checkbox">
           <div class="slider round">
-            <!-- <span class="slider_text st_random">랜덤영상</span>
-            <span class="slider_text st_battle">배틀영상</span> -->
           </div>
           <div class="text"></div>
         </label>
       </div>
     </div>
-    <div class="header_ele header_cen">
+    <div class="header_ele header_cen" *ngIf="router.url === '/battle'">
       <ul class="position_list">
         <li class="top" (click)="onSelected('top')" [class.selectedTop]="selected == 'top'"></li>
         <li class="jungle" (click)="onSelected('jungle')" [class.selectedJungle]="selected == 'jungle'"></li>
@@ -23,7 +25,7 @@
     </div>
     <div class="header_ele header_right">
       <ul class="user_control">
-        <li class="upload"><img src="/public/images/button-upload.png" alt="upload" /></li>
+        <li class="upload"><img src="/public/images/button-upload.png" alt="upload" (click)="goPage('/upload')"/></li>
         <li class="setting"><img src="/public/images/combined-shape.png" alt="setting" /></li>
         <li class="nickname" (click)="dropSelect()">Junghyun Park</li>
         <li class="profile" (click)="dropSelect()"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
@@ -73,5 +75,40 @@
           </div>
         </div>
       </div>
+
+
+<!-- 동균부분 -->
+<!-- =======
+  <div class="header_ele header_left">
+    <h1 class="logo">
+      <img src="/public/images/logo-image.png" alt="Legend TV"
+           (click)="goPage('/')"/>
+      <img src="/public/images/logo-text.png" class="logo-text" alt=""
+           (click)="goPage('/')"/>
+    </h1>
+    <div class="video_switch">
+
+>>>>>>> origin/dev-hackurity01-random-video
     </div>
+  </div>
+  <div class="header_ele header_cen"
+       *ngIf="router.url === '/battle'">
+    <ul class="position_list">
+      <li><img src="/public/images/button-top-off.png" alt="top"></li>
+      <li><img src="/public/images/button-jungle-off.png" alt="jungle"></li>
+      <li><img src="/public/images/button-mid-off.png" alt="mid"></li>
+      <li><img src="/public/images/button-sup-off.png" alt="support"></li>
+      <li><img src="/public/images/button-ad-off.png" alt="ad"></li>
+    </ul>
+  </div>
+  <div class="header_ele header_right">
+    <ul class="user_control">
+      <li><img src="/public/images/button-upload.png" alt="upload" class="btn-upload"
+               (click)="goPage('/upload')"/></li>
+      <li><img src="/public/images/combined-shape.png" alt="setting" class="btn-setting"/></li>
+      <li><span class="text-displayName">Junghyun Park</span></li>
+      <li><img src="/public/images/bitmap.png" alt="profile picture" class="profile-pic"/></li>
+      <li><img src="/public/images/button-profile.png" alt="drop down" class="btn-dropdown"/></li>
+    </ul>-->
+  </div>
 </header>

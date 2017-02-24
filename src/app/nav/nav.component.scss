@@ -12,7 +12,7 @@
   z-index: 999;
   position: absolute;
   left:0;
-  padding: 0 50px;
+  padding: 0 30px 0 25px;
 }
 
 .header_ele{
@@ -36,6 +36,7 @@
 
 .text_logo {
   margin-left: 9px;
+  cursor: pointer;
 }
 
 .position_list{
@@ -350,3 +351,34 @@ input:checked + .slider + .text:before {
   letter-spacing: normal;
   color: #a4a4a4;
 }
+// =======
+// .logo-text {
+//   margin: auto 10px;
+//   cursor: pointer;
+// }
+//
+// .btn-upload {
+//   padding-left: 10px;
+//   cursor: pointer;
+// }
+//
+// .btn-setting {
+//   padding-left: 20px;
+//   cursor: pointer;
+// }
+//
+// .text-displayName {
+//   padding-left: 20px;
+//   cursor: pointer;
+// }
+//
+// .profile-pic {
+//   padding-left: 15px;
+//   cursor: pointer;
+// }
+//
+// .btn-dropdown {
+//   padding-left: 15px;
+//   cursor: pointer;
+// }
+// >>>>>>> origin/dev-hackurity01-random-video

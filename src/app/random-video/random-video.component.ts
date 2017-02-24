@@ -20,7 +20,8 @@ export class RandomVideoComponent implements OnInit {
   constructor(private randomVideoService: RandomVideoService) {
     this.randomVideoService.joinRandomChatting('GPexqi3flNM');
     this.randomVideoService.getEventListener().subscribe(event => {
-        this.chattings.push(event);
+        event.picture = "/public/images/bitmap.png";
+        this.chattings.unshift(event);
     });
   }
 

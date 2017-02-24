@@ -9,7 +9,11 @@
     </div>
   </div>
   <div class="wrapper-chat">
-    <input type="text" class="input-chat" #message>
-    <a class="btn-chat" (click)="onChat(message.value)"><img src="/public/images/bitmap.png" class="img-chat"></a>
+    <input type="text" class="input-chat" placeholder="자유롭게 대화를 나눠 보세요!"
+           (keydown.enter)="onChat(message)"
+           #message>
+    <a class="btn-chat" (click)="onChat(message)">
+      <img src="/public/images/bitmap.png" class="img-chat">
+    </a>
   </div>
 </div>

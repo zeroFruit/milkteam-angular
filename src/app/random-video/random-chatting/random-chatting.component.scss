@@ -7,43 +7,68 @@
   box-sizing: border-box;
   width: 20%;
   height: 100%;
+  margin-left: 30px;
 
   .chatting-list {
-    height: calc(100% - 60px);
+    height: 88%; //calc(100% - 60px);
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2px;
 
     .chatting {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
+      margin-bottom: 8px;
       .wrapper-picture {
         width: 50px;
         height: 50px;
         border-radius: 25px;
         display: inline-block;
+        margin: 8px;
+        vertical-align: middle;
       }
       .wrapper-content {
         display: inline-block;
-        width: calc(100% - 60px);
+        width: calc(100% - 76px);
+        vertical-align: middle;
+        text-align: left;
+        padding-right: 10px;
+        word-break: break-all;
 
         .nickname {
+          padding-bottom: 3px;
           font-weight: bold;
           color: #fd3d8a;
         }
         .message {
           color: #ffffff;
+          font-weight: 100;
+          font-size: 14px;
         }
       }
     }
   }
   .wrapper-chat {
-    height: 60px;
+    height: 50px;
+    position: relative;
+    display: flex;
 
     .input-chat {
-      width: calc(100% - 65px);
+      margin: auto 0;
+      vertical-align: middle;
+      width: calc(100% - 35px);
+      height: 24px;
+      border-radius: 12px;
+      border: 0;
+      padding: 0 17px 0 10px;
     }
     .btn-chat {
       width: 50px;
       height: 50px;
       display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      right: 0;
 
       .img-chat {
         width: 100%;
