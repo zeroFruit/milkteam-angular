@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0837fe-a632-4036-9641-942c6228fb79" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.scss" afterPath="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html" afterPath="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts" afterPath="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/battle-video/battle-video.component.html" afterPath="$PROJECT_DIR$/src/app/battle-video/battle-video.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts" afterPath="$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts" afterPath="$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/modal/video.model.ts" afterPath="$PROJECT_DIR$/src/app/modal/video.model.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.html" afterPath="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.scss" afterPath="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.ts" afterPath="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/random-video/random-video.component.html" afterPath="$PROJECT_DIR$/src/app/random-video/random-video.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/random-video/random-video.component.ts" afterPath="$PROJECT_DIR$/src/app/random-video/random-video.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/random-video/random-video.service.ts" afterPath="$PROJECT_DIR$/src/app/random-video/random-video.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/upload/upload.component.ts" afterPath="$PROJECT_DIR$/src/app/upload/upload.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/upload/upload.service.ts" afterPath="$PROJECT_DIR$/src/app/upload/upload.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/video/video.component.html" afterPath="$PROJECT_DIR$/src/app/video/video.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,14 +28,14 @@
     <favorites_list name="milkteam-angular" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.672">
+    <splitter split-orientation="horizontal" split-proportion="0.6408">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="random-video.service.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="325">
-                  <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+                <state relative-caret-position="270">
+                  <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#65#0" expanded="true" />
                   </folding>
@@ -51,43 +43,61 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="random-video.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.component.ts">
+          <file leaf-file-name="battle-video.service.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+                <state relative-caret-position="445">
+                  <caret line="83" column="92" lean-forward="false" selection-start-line="83" selection-start-column="92" selection-end-line="83" selection-end-column="92" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="random-video.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.component.html">
+          <file leaf-file-name="battle-video.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+                <state relative-caret-position="235">
+                  <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="random-info.component.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.ts">
+          <file leaf-file-name="battle-video.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#49#98#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="211">
+                  <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="random-info.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.html">
+          <file leaf-file-name="battle-chating.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+                <state relative-caret-position="165">
+                  <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="battle-chating.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -97,21 +107,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="battle-video.component.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="battle-video.component.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2580">
-                  <caret line="208" column="18" lean-forward="true" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="random-info.component.scss" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+                <state relative-caret-position="-2534">
+                  <caret line="209" column="18" lean-forward="false" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -143,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/auth/find-pw/find-pw.component.html" />
         <option value="$PROJECT_DIR$/src/app/auth/auth.component.html" />
         <option value="$PROJECT_DIR$/src/app/auth/auth.component.scss" />
         <option value="$PROJECT_DIR$/src/app/auth/login/login.component.html" />
@@ -173,27 +172,28 @@
         <option value="$PROJECT_DIR$/src/app/nav/nav.component.scss" />
         <option value="$PROJECT_DIR$/src/app/modal/battle-chatting.model.ts" />
         <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chat-message/battle-chat-message.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html" />
         <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chat-message/battle-chat-message.component.html" />
         <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chat-message/battle-chat-message.component.scss" />
         <option value="$PROJECT_DIR$/src/app/app.config.ts" />
         <option value="$PROJECT_DIR$/src/app/nav/nav.component.ts" />
         <option value="$PROJECT_DIR$/src/app/nav/nav.component.html" />
-        <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/battle-video/battle-video.component.html" />
-        <option value="$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts" />
         <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.scss" />
         <option value="$PROJECT_DIR$/src/app/upload/upload.service.ts" />
         <option value="$PROJECT_DIR$/src/app/modal/video.model.ts" />
         <option value="$PROJECT_DIR$/src/app/upload/upload.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/random-video/random-video.service.ts" />
         <option value="$PROJECT_DIR$/src/app/video/video.component.html" />
         <option value="$PROJECT_DIR$/src/app/random-video/random-video.component.html" />
         <option value="$PROJECT_DIR$/src/app/random-video/random-video.component.ts" />
         <option value="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.scss" />
         <option value="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.html" />
         <option value="$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/random-video/random-video.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/battle-video/battle-video.component.html" />
+        <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -400,6 +400,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="battle-video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milkteam-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milkteam-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="battle-video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="battle-chating" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milkteam-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milkteam-angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -414,7 +462,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -525,7 +573,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115902000" />
+    <option name="totallyTimeSpent" value="120449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -567,14 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/auth/auth.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -773,50 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="69" column="18" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#65#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="78" column="39" lean-forward="false" selection-start-line="78" selection-start-column="39" selection-end-line="78" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#71#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/upload/upload.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
@@ -840,14 +836,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/upload/upload.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +876,7 @@
         <state relative-caret-position="270">
           <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#71#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -901,28 +889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/video/video.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -935,14 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2580">
-          <caret line="208" column="18" lean-forward="true" selection-start-line="208" selection-start-column="18" selection-end-line="208" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -951,11 +913,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#49#98#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -967,13 +947,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/random-video/random-info/random-info.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="-2534">
+          <caret line="209" column="18" lean-forward="false" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/upload/upload.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/random-video/random-video.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding>
-            <element signature="e#49#98#0" expanded="true" />
+            <element signature="e#0#65#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="83" column="92" lean-forward="false" selection-start-line="83" selection-start-column="92" selection-end-line="83" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="33" column="39" lean-forward="true" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-video.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/battle-video/battle-chating/battle-chating.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" *ngIf="battleInfo">
   <div class="battle_wrap">
     <section class="videos_title">
-      <h2 class="battle_title">미스포츈으로 캐리한 매드무비입니다. vs 제가 자이라로 하드캐리한 매드무비입니다.</h2>
+      <h2 class="battle_title">{{ battleInfo.videos[0].title }} vs {{ battleInfo.videos[1].title }}</h2>
     </section>
     <section class="viewlike">
       <h2 class="hidden-title">조회수와 좋아요 수</h2>
@@ -14,16 +14,16 @@
 
   <div class="battle_wrap bw2">
     <section class="battle_video">
-      <h2 class="hidden-title">미스포츈으로 캐리한 매드무비입니다. vs 제가 자이라로 하드캐리한 매드무비입니다.</h2>
+      <h2 class="hidden-title">{{ battleInfo.videos[0].title }} vs {{ battleInfo.videos[1].title }}</h2>
       <div class="videos">
         <div class="v1 video">
-          <lol-video [videoId]="videos[0].videoId"
+          <lol-video [videoId]="battleInfo.videos[0].videoId"
                      [black_gradient]="false"
                      (video_status)="videoStatusChange(status, 0)"
           ></lol-video>
         </div>
         <div class="v2 video">
-          <lol-video [videoId]="videos[1].videoId"
+          <lol-video [videoId]="battleInfo.videos[1].videoId"
                      [black_gradient]="false"
                      (video_status)="videoStatusChange(status, 1)"
           ></lol-video>
@@ -47,12 +47,12 @@
             <img class="i_profile_pic" src="/public/images/button-board-profile-image.png" alt="">
           </div>
           <div class="i_content">
-            <h2 class="i_title">미스포츈으로 캐리한 매드무비입니다.</h2>
+            <h2 class="i_title">{{ battleInfo.videos[0].title }}</h2>
             <div class="scrollbar style-1">
               <div class="force-overflow">
-                <p class="l_content">제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는
-                  완전 초반부터 제가 말려놔서 아예 힘도못써고 무력하게 죽었네요. 제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한
-                  역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제 </p>
+                <p class="l_content">
+                  {{ battleInfo.videos[0].desc }}
+                </p>
               </div>
             </div>
           </div>
@@ -62,12 +62,12 @@
             <img class="i_profile_pic" src="/public/images/button-board-profile-image.png" alt="">
           </div>
           <div class="i_content">
-            <h2 class="i_title">미스포츈으로 캐리한 매드무비입니다. 미스포츈으로 캐리한 매드무비입니다.</h2>
+            <h2 class="i_title">{{ battleInfo.videos[1].title }}</h2>
             <div class="scrollbar style-1">
               <div class="force-overflow">
-                <p class="l_content">제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는
-                  완전 초반부터 제가 말려놔서 아예 힘도못써고 무력하게 죽었네요. 제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한
-                  역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제 </p>
+                <p class="l_content">
+                  {{ battleInfo.videos[1].desc }}
+                </p>
               </div>
             </div>
           </div>
@@ -76,6 +76,7 @@
     </section>
     <battle-chating
       [chattings]="chattings"
+      [videos]="battleInfo.videos"
       (chatClicked)="chatClicked($event)"
     ></battle-chating>
   </div>

@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { BattleChatting } from "../../modal/battle-chatting.model";
+import { Video } from "../../modal/video.model";
 
 @Component({
   selector   : 'battle-chating',
@@ -8,6 +9,7 @@ import { BattleChatting } from "../../modal/battle-chatting.model";
 })
 export class BattleChatingComponent {
   @Input() chattings: BattleChatting[];
+  @Input() videos: Video[];
   @Output() chatClicked = new EventEmitter<Object>();
   leftChamp: Boolean = true; // left = true, right = false
 
