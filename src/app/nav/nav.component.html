@@ -2,8 +2,8 @@
 <!-- <<<<<<< HEAD -->
     <div class="header_ele header_left">
       <h1 class="logo">
-        <img src="/public/images/logo-image.png" alt="Legend TV" routerLink="/"/>
-        <img class="text_logo" src="/public/images/logo-text.png" alt="" routerLink="/"/>
+        <img src="/public/images/logo-image.png" alt="Legend TV" routerLink="/" (click)="makeBattleFalse()"/>
+        <img class="text_logo" src="/public/images/logo-text.png" alt="" routerLink="/" (click)="makeBattleFalse()"/>
       </h1>
 
       <div class="video_switch" *ngIf="router.url === '/battle' || router.url === '/' || router.url === '/main'">
@@ -51,7 +51,8 @@
         <button class="drop_btn logout" (click)="onLogout()"><img src="/public/images/logout-icon.png" alt="logout icon"><span>로그아웃</span></button>
         <div class="alarm_wrap">
           <div class="alarm_champ">
-            <img src="" alt="champion">
+              <img src="/public/images/bitmap.png" alt="profile picture" *ngIf="!authService.user || !authService.user.profile"/>
+              <img [src]="authService.user.profile" alt="my profile picture" *ngIf="authService.user && authService.user.profile">
           </div>
           <div class="alarm_content">
             <div class="alarm_text">
@@ -69,7 +70,8 @@
         </div>
         <div class="alarm_wrap">
           <div class="alarm_champ">
-            <img src="" alt="champion">
+              <img src="/public/images/bitmap.png" alt="profile picture" *ngIf="!authService.user || !authService.user.profile"/>
+              <img [src]="authService.user.profile" alt="my profile picture" *ngIf="authService.user && authService.user.profile">
           </div>
           <div class="alarm_content">
             <div class="alarm_text">

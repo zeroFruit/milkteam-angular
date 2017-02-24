@@ -16,6 +16,7 @@ export class RandomVideoComponent implements OnInit {
   chattings: RandomChatting[] = [];
   videos: Video[];
   videoId: string;
+  chatOn: Boolean = false;
 
   constructor(private randomVideoService: RandomVideoService) {
     this.randomVideoService.joinRandomChatting(this.videoId);
@@ -40,5 +41,9 @@ export class RandomVideoComponent implements OnInit {
 
   chatClicked(message: string) {
     this.randomVideoService.chat(message);
+  }
+
+  chattingOn(){
+    this.chatOn = !this.chatOn;
   }
 }

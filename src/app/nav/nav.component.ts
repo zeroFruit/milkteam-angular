@@ -18,6 +18,8 @@ export class NavComponent {
     ) {
       if(window.location.pathname === '/battle') {
         this.isBattle = true;
+      } else {
+        this.isBattle = false;
       }
   }
 
@@ -48,6 +50,10 @@ export class NavComponent {
         this.isBattle = !this.isBattle;
         // console.log(this.router.url);
       }
+  }
+
+  makeBattleFalse() {
+    this.isBattle = false;
   }
 
   /**
