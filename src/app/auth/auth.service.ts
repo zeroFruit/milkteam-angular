@@ -1,5 +1,7 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
+import { OPAQUE_TOKEN } from '../app.config';
 import { Http, Headers, RequestOptions } from "@angular/http";
+import { Router } from '@angular/router';
 import 'rxjs/Rx';
 
 import { User } from "../modal/user.model"
@@ -7,7 +9,11 @@ import { error } from "util";
 
 @Injectable()
 export class AuthService {
-  constructor(private http: Http) {
+  constructor(
+    @Inject(OPAQUE_TOKEN) public appConfig: any,
+    private http: Http,
+    private router: Router
+    ) {
   }
 
   login(email: string, password: string): void {
@@ -21,12 +27,13 @@ export class AuthService {
     console.log(headers);
     const options = new RequestOptions({headers: headers});
     console.log(options);
-    this.http.post('http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002/users/login', body, options).toPromise()
+    this.http.post(`${this.appConfig.apiEndpoint}/users/login`, body, options).toPromise()
       .then(response => {
         console.log("login response", response.json());
         if(response.json().code == 2) {
           localStorage.setItem('tokens', response.headers.get('x-auth'));
-          location.href = "/main";
+          //location.href = "/main";
+          this.router.navigate(['/main']);
           return;
         }
       })
@@ -46,7 +53,7 @@ export class AuthService {
     console.log(body);
     const headers = new Headers({"Content-Type": "application/json", "x-auth": "asdf"});
     const options = new RequestOptions({headers: headers});
-    this.http.post('http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002/users', body, options).toPromise()
+    this.http.post(`${this.appConfig.apiEndpoint}/users`, body, options).toPromise()
       .then(response => {
         response.json();
         if(response.json().status == 'Success') {
