@@ -30,4 +30,8 @@ export class UploadComponent {
     this.uploadService.upload(this.video);
     console.log(this.video);
   }
+
+  // goPage(page: string) {
+  //   location.href = page;
+  // }
 }

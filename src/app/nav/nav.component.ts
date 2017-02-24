@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
 export class NavComponent {
   selected: string;
   dropDown: Boolean = true;
+  isBattle: Boolean;
 
   onSelected(position) {
     this.selected = position;
@@ -21,7 +22,17 @@ export class NavComponent {
   constructor(private router: Router) {
   }
 
-  goPage(page: string) {
-    location.href = page;
+  switchVideo(): void {
+      if (this.isBattle) {
+        this.router.navigate(['/']);
+        this.isBattle = !this.isBattle;
+      } else {
+        this.router.navigate(['/battle']);
+        this.isBattle = !this.isBattle;
+      }
   }
+
+  // goPage(page: string) {
+  //   location.href = page;
+  // }
 }

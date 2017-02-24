@@ -282,4 +282,5 @@ input[type="radio"]:checked + label span {
   position: absolute;
   right:40px;
   top:40px;
+  cursor: pointer;
 }

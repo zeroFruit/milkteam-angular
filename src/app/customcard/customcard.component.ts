@@ -72,6 +72,11 @@ export class CustomcardComponent {
     this.isChallenger = !this.isChallenger;
   }
 
+  // 
+  // goPage(page: string) {
+  //   location.href = page;
+  // }
+
   // characterBtn(character) {
   //   this.character.push(character)
   // }

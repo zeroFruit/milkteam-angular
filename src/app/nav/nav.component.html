@@ -2,12 +2,12 @@
 <!-- <<<<<<< HEAD -->
     <div class="header_ele header_left">
       <h1 class="logo">
-        <img src="/public/images/logo-image.png" alt="Legend TV" (click)="goPage('/')"/>
-        <img class="text_logo" src="/public/images/logo-text.png" alt="" (click)="goPage('/')"/>
+        <img src="/public/images/logo-image.png" alt="Legend TV" routerLink="/"/>
+        <img class="text_logo" src="/public/images/logo-text.png" alt="" routerLink="/"/>
       </h1>
-      <div class="video_switch">
+      <div class="video_switch" *ngIf="router.url === '/battle' || router.url === '/'" >
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" [attr.checked]="isBattle">
           <div class="slider round">
           </div>
           <div class="text"></div>
@@ -25,8 +25,8 @@
     </div>
     <div class="header_ele header_right">
       <ul class="user_control">
-        <li class="upload"><img src="/public/images/button-upload.png" alt="upload" (click)="goPage('/upload')"/></li>
-        <li class="setting"><img src="/public/images/combined-shape.png" alt="setting" /></li>
+        <li class="upload"><img src="/public/images/button-upload.png" alt="upload" routerLink="/upload"/></li>
+        <li class="setting"><img src="/public/images/combined-shape.png" alt="setting" routerLink="/filter"/></li>
         <li class="nickname" (click)="dropSelect()">Junghyun Park</li>
         <li class="profile" (click)="dropSelect()"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
         <li class="drop" (click)="dropSelect()">
@@ -36,7 +36,7 @@
       </ul>
 
       <div class="dropdown_menu" *ngIf="!dropDown">
-        <button class="drop_btn my_account"><img src="/public/images/user-icon2.png" alt="user icon"><span>내 계정</span></button>
+        <button class="drop_btn my_account" routerLink="/mypage"><img src="/public/images/user-icon2.png" alt="user icon"><span>내 계정</span></button>
         <button class="drop_btn logout"><img src="/public/images/logout-icon.png" alt="logout icon"><span>로그아웃</span></button>
         <div class="alarm_wrap">
           <div class="alarm_champ">
