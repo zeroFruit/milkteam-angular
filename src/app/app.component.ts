@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.scss']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
+    constructor(
+        private authService: AuthService
+    ) {}
+    ngOnInit () {
+        // 자동 로그인 Check
+        this.authService.getUserInfo();
+    }
 }

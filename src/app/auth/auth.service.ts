@@ -9,6 +9,7 @@ import { error } from "util";
 
 @Injectable()
 export class AuthService {
+  public user: Object;
   constructor(
     @Inject(OPAQUE_TOKEN) public appConfig: any,
     private http: Http,
@@ -17,21 +18,20 @@ export class AuthService {
   }
 
   login(email: string, password: string): void {
-    console.log("try login");
     const user = new User(email, password);
     const body = JSON.stringify(user);
-    console.log(body);
+
     let headers = new Headers({
       'Content-Type': 'application/json'
     });
-    console.log(headers);
     const options = new RequestOptions({headers: headers});
-    console.log(options);
+
     this.http.post(`${this.appConfig.apiEndpoint}/users/login`, body, options).toPromise()
       .then(response => {
-        console.log("login response", response.json());
+
         if(response.json().code == 2) {
           localStorage.setItem('tokens', response.headers.get('x-auth'));
+          this.user = response.json().data;
           //location.href = "/main";
           this.router.navigate(['/main']);
           return;
@@ -55,10 +55,75 @@ export class AuthService {
     const options = new RequestOptions({headers: headers});
     this.http.post(`${this.appConfig.apiEndpoint}/users`, body, options).toPromise()
       .then(response => {
-        response.json();
-        if(response.json().status == 'Success') {
-          localStorage.setItem('tokens', response.json().token);
+        if(response.json().code == 0) {
+          localStorage.setItem('tokens', response.headers.get('x-auth'));
+          this.user = response.json().data;
+          this.router.navigate(['/main']);
         }
       });
+  }
+
+  /**
+   * 로그아웃 함수
+   * @date 2017-02-24
+   * @author 김진혁
+   */
+  logout () {
+    let token;
+    token = this.getToken();
+    if (token) {
+      let headers = new Headers({'Content-Type': 'application/json', 'x-auth': token});
+      let options = new RequestOptions({headers: headers});
+      this.http.delete(`${this.appConfig.apiEndpoint}/users/me/token`, options)
+        .toPromise()
+        .then(response => {
+            if (response.json().code == 4) {
+              // 로그아웃 성공
+              localStorage.removeItem('tokens');
+              this.user = undefined;
+            }
+        })
+    }
+    else {
+      alert('로그인이 되어있지 않습니다.');
+    }
+    
+  }
+
+  /**
+   * 처음 로그인을 확인하는 함수
+   * @date 2017-92-24
+   * @author 김진혁
+   */
+  getUserInfo () {
+    console.log('start getUserInfo');
+    let token;
+    token = this.getToken();
+    console.log(token);
+    if (token) {
+      let headers = new Headers({'Content-Type': 'application/json', 'x-auth': token});
+      let options = new RequestOptions({headers: headers});
+      this.http.get(`${this.appConfig.apiEndpoint}/users`, options)
+        .toPromise()
+        .then(response => {
+          if (response.json().code == 6) {
+            // 로그인 성공
+            this.user = response.json().data;
+            return this.user;
+          }
+        }).catch(error => {
+          console.log('no tokens');
+        })
+
+    }
+  }
+
+  /**
+   * 토큰 반환함수
+   * @date 2017-02-24
+   * @author 김진혁
+   */
+  getToken () {
+    return localStorage.getItem('tokens');
   }
 }
