@@ -1,5 +1,5 @@
 <label class="champ_label">
-  <input [(ngModel)]="myChampion" placeholder="챔피언을 입력하세요."/>
+  <input [(ngModel)]="myChampion" placeholder="챔피언을 입력하세요." (ngModelChange)="onChampionChange($event)"/>
 </label>
 <div class="main" *ngIf="champions">
   <ul>
