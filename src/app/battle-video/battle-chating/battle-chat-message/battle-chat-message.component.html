@@ -1,7 +1,24 @@
-
 <div class="chat_msg_wrap">
   <div class="scrollbar style-1">
     <div class="force-overflow">
+
+      <div *ngFor="let chatting of chattings" class="chat_msg {{chatting.side}}_msg" >
+        <div class="chat_profile">
+          <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
+        </div>
+        <div class="chat_content">
+          <div class="chat_id">
+            <span>{{chatting.displayName}}</span>
+          </div>
+          <div class="chat_ballon">
+            <span>{{chatting.msg}}</span>
+          </div>
+        </div>
+        <div class="chat_time">
+          <span>{{chatting.date}}</span>
+        </div>
+      </div>
+      <!--
       <div class="chat_msg left_msg">
         <div class="chat_profile">
           <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
@@ -11,7 +28,7 @@
             <span>Angular</span>
           </div>
           <div class="chat_ballon">
-            <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
+            <span>와..요..</span>
           </div>
         </div>
         <div class="chat_time">
@@ -27,126 +44,14 @@
             <span>Angular</span>
           </div>
           <div class="chat_ballon">
-            <span>와...가르쳐주세요..</span>
+            <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
           </div>
         </div>
         <div class="chat_profile">
           <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
         </div>
       </div>
-      <div class="chat_msg left_msg">
-          <div class="chat_profile">
-            <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-          </div>
-          <div class="chat_content">
-            <div class="chat_id">
-              <span>Angular</span>
-            </div>
-            <div class="chat_ballon">
-              <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
-            </div>
-          </div>
-          <div class="chat_time">
-            <span>오후 08:05</span>
-          </div>
-        </div>
-      <div class="chat_msg right_msg">
-          <div class="chat_time">
-            <span>오후 08:05</span>
-          </div>
-          <div class="chat_content">
-            <div class="chat_id">
-              <span>Angular</span>
-            </div>
-            <div class="chat_ballon">
-              <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
-            </div>
-          </div>
-          <div class="chat_profile">
-            <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-          </div>
-        </div>
-      <div class="chat_msg left_msg">
-            <div class="chat_profile">
-              <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-            </div>
-            <div class="chat_content">
-              <div class="chat_id">
-                <span>Angular</span>
-              </div>
-              <div class="chat_ballon">
-                <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
-              </div>
-            </div>
-            <div class="chat_time">
-              <span>오후 08:05</span>
-            </div>
-          </div>
-      <div class="chat_msg right_msg">
-            <div class="chat_time">
-              <span>오후 08:05</span>
-            </div>
-            <div class="chat_content">
-              <div class="chat_id">
-                <span>Angular</span>
-              </div>
-              <div class="chat_ballon">
-                <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
-              </div>
-            </div>
-            <div class="chat_profile">
-              <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-            </div>
-          </div>
-      <div class="chat_msg right_msg">
-            <div class="chat_time">
-              <span>오후 08:05</span>
-            </div>
-            <div class="chat_content">
-              <div class="chat_id">
-                <span>Angular</span>
-              </div>
-              <div class="chat_ballon">
-                <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다...도 한수만 가르쳐주세요..</span>
-              </div>
-            </div>
-            <div class="chat_profile">
-              <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-            </div>
-      </div>
-      <div class="chat_msg left_msg">
-              <div class="chat_profile">
-                <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-              </div>
-              <div class="chat_content">
-                <div class="chat_id">
-                  <span>Angular</span>
-                </div>
-                <div class="chat_ballon">
-                  <span>와..요..</span>
-                </div>
-              </div>
-              <div class="chat_time">
-                <span>오후 08:05</span>
-              </div>
-      </div>
-      <div class="chat_msg right_msg">
-              <div class="chat_time">
-                <span>오후 08:05</span>
-              </div>
-              <div class="chat_content">
-                <div class="chat_id">
-                  <span>Angular</span>
-                </div>
-                <div class="chat_ballon">
-                  <span>와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..와...미스포츈....다이아인 나도 배우고싶은 실력...갖고싶다... 나도 한수만 가르쳐주세요..</span>
-                </div>
-              </div>
-              <div class="chat_profile">
-                <img class="chat_profile_pic" src="/public/images/button-board-profile-image.png" alt="user profile pic">
-              </div>
-            </div>
+      -->
     </div>
   </div>
-
 </div>

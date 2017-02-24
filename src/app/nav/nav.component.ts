@@ -10,8 +10,18 @@ import { AuthService } from '../auth/auth.service';
 export class NavComponent {
   selected: string;
   dropDown: Boolean = true;
-  isBattle: Boolean;
 
+  isBattle: boolean = true;
+
+  constructor(
+    private router: Router,
+    private authService: AuthService
+    ) {
+      if(router.url === '/') {
+        this.isBattle = false;
+      }
+      console.log(this.authService.user);
+  }
 
   onSelected(position) {
     this.selected = position;
@@ -22,12 +32,7 @@ export class NavComponent {
     this.dropDown = !this.dropDown;
   }
 
-  constructor(
-    private router: Router,
-    private authService: AuthService
-    ) {
-      console.log(this.authService.user);
-  }
+  
 
     // console.log(this.router.url);
     // if (this.router.url == '/battle') {
@@ -53,6 +58,10 @@ export class NavComponent {
    */
   onLogout () {
     this.authService.logout();  
+  }
+
+  goPage(page: string) {
+    this.router.navigate([page]);
   }
   // goPage(page: string) {
   //   location.href = page;

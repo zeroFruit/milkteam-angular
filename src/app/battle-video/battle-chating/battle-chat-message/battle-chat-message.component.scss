@@ -8,8 +8,8 @@
 
 .chat_msg {
   display: flex;
-  padding: 8px 20px;
-  margin: 20px 0px;
+  padding: 5px 15px;
+  margin: 0px 0px;
 }
 
 .left_msg{
@@ -21,11 +21,11 @@
 }
 
 .left_msg > .chat_profile {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .right_msg > .chat_profile {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .chat_profile {
@@ -35,6 +35,8 @@
 }
 
 .chat_profile_pic {
+  width: 40px;
+  height: 40px;
 }
 
 .chat_content{
@@ -71,15 +73,16 @@
 
 .chat_ballon{
   display: flex;
-  padding: 12px 20px;
+  padding: 10px 17px;
   font-family: SpoqaHanSans;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.43;
   letter-spacing: normal;
-  margin-top: 8px;
+  margin-top: 2px;
+  word-break: break-all;
 }
 
 .left_msg > .chat_content > .chat_ballon {

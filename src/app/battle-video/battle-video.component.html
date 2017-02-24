@@ -1,5 +1,5 @@
-<my-nav></my-nav>
 <div class="container">
+  <my-nav></my-nav>
   <div class="battle_wrap">
     <section class="videos_title">
       <h2 class="battle_title">미스포츈으로 캐리한 매드무비입니다. vs 제가 자이라로 하드캐리한 매드무비입니다.</h2>
@@ -17,11 +17,17 @@
     <section class="battle_video">
       <h2 class="hidden-title">미스포츈으로 캐리한 매드무비입니다. vs 제가 자이라로 하드캐리한 매드무비입니다.</h2>
       <div class="videos">
-        <div class="v1">
-
+        <div class="v1 video">
+          <lol-video [videoId]="videos[0].videoId"
+                     [black_gradient]="false"
+                     (video_status)="videoStatusChange(status, 0)"
+          ></lol-video>
         </div>
-        <div class="v2">
-
+        <div class="v2 video">
+          <lol-video [videoId]="videos[1].videoId"
+                     [black_gradient]="false"
+                     (video_status)="videoStatusChange(status, 1)"
+          ></lol-video>
         </div>
       </div>
       <div class="voting">
@@ -45,7 +51,9 @@
             <h2 class="i_title">미스포츈으로 캐리한 매드무비입니다.</h2>
             <div class="scrollbar style-1">
               <div class="force-overflow">
-                <p class="l_content">제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제가 말려놔서 아예 힘도못써고 무력하게 죽었네요. 제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제 </p>
+                <p class="l_content">제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는
+                  완전 초반부터 제가 말려놔서 아예 힘도못써고 무력하게 죽었네요. 제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한
+                  역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제 </p>
               </div>
             </div>
           </div>
@@ -58,41 +66,47 @@
             <h2 class="i_title">미스포츈으로 캐리한 매드무비입니다. 미스포츈으로 캐리한 매드무비입니다.</h2>
             <div class="scrollbar style-1">
               <div class="force-overflow">
-                <p class="l_content">제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제가 말려놔서 아예 힘도못써고 무력하게 죽었네요. 제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제 </p>
+                <p class="l_content">제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한 역전승을 했습니다. 상대편 애쉬는
+                  완전 초반부터 제가 말려놔서 아예 힘도못써고 무력하게 죽었네요. 제가 팀내에서 딜량도 압도적인 1위였고, 마지막에 바론 스틸 없었으면 졌을거 같은데 제가 바론스틸까지 하면서 완벽한
+                  역전승을 했습니다. 상대편 애쉬는 완전 초반부터 제 </p>
               </div>
             </div>
           </div>
         </article>
       </div>
-
     </section>
-    <battle-chating></battle-chating>
+    <battle-chating
+      [chattings]="chattings"
+      (chatClicked)="chatClicked($event)"
+    ></battle-chating>
   </div>
-</div>
 
-<footer class="footer">
-  <div class="container">
+
+  <footer class="footer">
     <div class="play_control">
       <span class="prvious_video">PREVIOUS VIDEO</span>
       <img src="/public/images/button-previous-video.png" alt>
-      <div class="play" (click)="playBtnClick()"  [class.stop_btn]="playStatus"  [class.play_btn]="!playStatus"></div>
+      <div class="play" (click)="playBtnClick()" [class.stop_btn]="playStatus" [class.play_btn]="!playStatus"></div>
       <img src="/public/images/button-next-video.png" alt>
       <span class="next_video">NEXT VIDEO</span>
     </div>
     <div class="play_option">
       <div class="coninuous_wrap" (click)="continueBtnClick()">
-        <div class="continuous_play_img"  [class.continuous_on]="continuousStatus" [class.continuous_off]="!continuousStatus">
+        <div class="continuous_play_img" [class.continuous_on]="continuousStatus"
+             [class.continuous_off]="!continuousStatus">
         </div>
-        <span class="continuous_play" [class.continuous_on_text]="continuousStatus" [class.continuous_off_text]="!continuousStatus">연속재생</span>
+        <span class="continuous_play" [class.continuous_on_text]="continuousStatus"
+              [class.continuous_off_text]="!continuousStatus">연속재생</span>
       </div>
       <div class="random_wrap" (click)="randomBtnClick()">
-        <div class="random_play_img"  [class.random_on]="randomStatus" [class.random_off]="!randomStatus">
+        <div class="random_play_img" [class.random_on]="randomStatus" [class.random_off]="!randomStatus">
         </div>
-        <span class="random_play" [class.random_on_text]="randomStatus" [class.random_off_text]="!randomStatus">랜덤재생</span>
+        <span class="random_play" [class.random_on_text]="randomStatus"
+              [class.random_off_text]="!randomStatus">랜덤재생</span>
       </div>
     </div>
     <div class="history_btn">
       <img src="/public/images/button-up.png" alt="">
     </div>
-  </div>
-</footer>
+  </footer>
+</div>

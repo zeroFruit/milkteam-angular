@@ -14,9 +14,9 @@ export interface AppConfig {
 };
 
 export const APP_CONFIG: AppConfig = {
-  apiEndpoint: 'http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3000',
+  apiEndpoint: 'http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002',
   socketEndpoint: 'http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002',
-  socketPath: '/api/socket/battle'
+  socketPath: '/api/socket/sub'
 };
 
 export let OpaqueTokenProvider = {
