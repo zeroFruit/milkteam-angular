@@ -104,6 +104,10 @@
   width: 34%;
 }
 
+.profile_pic > img {
+  width:100%;
+}
+
 .profile_search {
   width: 66%;
   display: flex;

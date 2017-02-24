@@ -16,7 +16,7 @@ export class NavComponent {
     private router: Router,
     private authService: AuthService
     ) {
-      if(router.url === '/battle') {
+      if(window.location.pathname === '/battle') {
         this.isBattle = true;
       }
   }
@@ -54,7 +54,7 @@ export class NavComponent {
    * 로그아웃 함수
    */
   onLogout () {
-    this.authService.logout();  
+    this.authService.logout();
   }
 
   goPage(page: string) {

@@ -1,10 +1,14 @@
 <div class="random-chatting">
-  <div class="chatting-list">
-    <div class="chatting" *ngFor="let chatting of chattings">
-      <div class="wrapper-picture" [ngStyle]="{'background-image': 'url('+chatting.picture+')'}"></div>
-      <div class="wrapper-content">
-        <div class="nickname">{{ chatting.displayName }}</div>
-        <div class="message">{{ chatting.msg }}</div>
+  <div class="scrollbar style-1">
+    <div class="force-overflow">
+      <div class="chatting-list">
+        <div class="chatting" *ngFor="let chatting of chattings">
+          <div class="wrapper-picture" [ngStyle]="{'background-image': 'url('+chatting.picture+')'}"></div>
+          <div class="wrapper-content">
+            <div class="nickname">{{ chatting.displayName }}</div>
+            <div class="message">{{ chatting.msg }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -13,7 +17,7 @@
            (keydown.enter)="onChat(message)"
            #message>
     <a class="btn-chat" (click)="onChat(message)">
-      <img src="/public/images/bitmap.png" class="img-chat">
+      <img src="/public/images/button-send2.png" class="img-chat">
     </a>
   </div>
 </div>

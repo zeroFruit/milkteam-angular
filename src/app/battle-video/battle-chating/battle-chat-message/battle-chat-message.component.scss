@@ -22,10 +22,12 @@
 
 .left_msg > .chat_profile {
   margin-right: 5px;
+  order:1;
 }
 
 .right_msg > .chat_profile {
   margin-left: 5px;
+  order:3;
 }
 
 .chat_profile {
@@ -43,6 +45,7 @@
   max-width:63%;
   display: flex;
   flex-direction: column;
+  order:2;
 }
 
 .right_msg > .chat_content {
@@ -112,8 +115,13 @@
   color: #c1c1c1;
 }
 
+.left_msg > .chat_time {
+  order:3;
+}
+
 .right_msg > .chat_time {
   justify-content: flex-end;
+  order:1;
 }
 
 .chat_msg_wrap > .scrollbar {

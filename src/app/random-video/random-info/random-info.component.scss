@@ -11,15 +11,19 @@
   .video-info {
     .video-tag {
       padding-bottom: 3px;
+      display: flex;
+      justify-content: flex-end;
       .tag {
-        display: inline-block;
         border-radius: 15px;
         width: 30px;
         color: #ffffff;
         font-size: 12px;
         font-weight: 400;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 2px 5px;
+        margin-left: 10px;
       }
       .new {background-color: #4369ff;}
       .best {background-color: #8444ff;}
@@ -43,12 +47,10 @@
 
       .btn-share {
         display: inline-block;
-        background-color: #4369ff;
         color: #ffffff;
         width: 40px;
         height: 40px;
-        text-align: center;
-        border-radius: 20px;
+        margin-left: 10px;
       }
     }
   }
