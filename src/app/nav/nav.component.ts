@@ -16,6 +16,7 @@ export class NavComponent {
 
   dropSelect() {
     this.dropDown = !this.dropDown;
+  }
 
   constructor(private router: Router) {
   }
