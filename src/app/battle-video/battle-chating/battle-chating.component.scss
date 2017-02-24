@@ -65,6 +65,7 @@
   width:100%;
   padding: 12px 20px;
   margin-bottom: 12px;
+  position: relative;
 }
 
 .isLeft{
@@ -84,4 +85,9 @@
 }
 
 
-.button_send {}
+.button_send {
+  position: absolute;
+  top:18px;
+  right:35px;
+  cursor: pointer;
+}
