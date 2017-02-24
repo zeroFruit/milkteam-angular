@@ -15,14 +15,18 @@ export class BattleVideoComponent {
   randomStatus: Boolean = false;
   videos: Video[];
   chattings: BattleChatting[] = [];
+  battleInfo: any;
 
   constructor(private battleVideoService: BattleVideoService) {
-    this.videos = this.battleVideoService.getVideos();
-    this.battleVideoService.joinBattleChatting('GPexqi3flNM', 'GPexqi3flNM'); // lVideoId, rVideoId
-    this.battleVideoService.getEventListener().subscribe(event => {
-      event.picture = "/public/images/bitmap.png";
-      this.chattings.unshift(event);
-      console.log(this.chattings);
+    this.battleVideoService.getBattleInfo().then(data => {
+      this.battleInfo = data;
+      console.log(this.battleInfo.videos[0]);
+      this.battleVideoService.joinBattleChatting(data.videos[0].videoId, data.videos[1].videoId); // lVideoId, rVideoId
+      this.battleVideoService.getEventListener().subscribe(event => {
+        event.picture = "/public/images/bitmap.png";
+        this.chattings.unshift(event);
+        console.log(this.chattings);
+      });
     });
   }
 

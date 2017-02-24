@@ -3,11 +3,11 @@
   <div class="chat_team_wrap">
     <div class="chat_team chat_team_left" (click)="champSwitch(true)">
       <div class="circle c1"></div>
-      <span>미스포츈</span>
+      <span>{{ videos[0].champion }}</span>
     </div>
     <div class="chat_team chat_team_right" (click)="champSwitch(false)">
       <div class="circle c2"></div>
-      <span>자이라</span>
+      <span>{{ videos[1].champion }}</span>
     </div>
     <div class="chat_input" [class.isLeft]="leftChamp" [class.isRight]="!leftChamp">
       <input class="chat_input_tag" placeholder="자유롭게 대화를 나눠 보세요!" (keydown.enter)="onChat(message)" #message>

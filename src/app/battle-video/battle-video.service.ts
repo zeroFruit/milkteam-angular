@@ -2,6 +2,7 @@ import { Injectable, Inject, EventEmitter } from "@angular/core";
 import { OPAQUE_TOKEN } from '../app.config';
 import io from 'socket.io-client';
 import { Video } from "../modal/video.model";
+import { Http } from "@angular/http";
 
 @Injectable()
 export class BattleVideoService {
@@ -13,7 +14,8 @@ export class BattleVideoService {
   listener: EventEmitter<any> = new EventEmitter();
 
   constructor(
-    @Inject(OPAQUE_TOKEN) public appConfig: any
+    @Inject(OPAQUE_TOKEN) public appConfig: any,
+    private http: Http
   ) {
     this.initSocket();
   }
@@ -74,12 +76,14 @@ export class BattleVideoService {
       this.socket.emit('lCreateMessage', params);
     else if(side == 'right')
       this.socket.emit('rCreateMessage', params);
-
   }
 
   /* Video
    -----------------------*/
-  getVideos(): Video[] {
-    return this.videos;
+  getBattleInfo(): Promise<any> {
+    return this.http.get(this.appConfig.apiEndpoint+'/match').toPromise().then(response => {
+      return response.json().data[0];
+    });
+    //return this.videos;
   }
 }

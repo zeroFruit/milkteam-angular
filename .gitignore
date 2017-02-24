@@ -2,3 +2,4 @@ node_modules/
 npm
 webpack-dev-server
 debug.log
+!node_modules/ng2-youtube-player
