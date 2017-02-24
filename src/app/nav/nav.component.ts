@@ -10,8 +10,7 @@ import { AuthService } from '../auth/auth.service';
 export class NavComponent {
   selected: string;
   dropDown: Boolean = true;
-
-  isBattle: boolean = true;
+  isBattle: boolean;
 
   constructor(
     private router: Router,
@@ -31,8 +30,6 @@ export class NavComponent {
     console.log(this.authService.user);
     this.dropDown = !this.dropDown;
   }
-
-  
 
     // console.log(this.router.url);
     // if (this.router.url == '/battle') {

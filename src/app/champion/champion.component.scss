@@ -2,12 +2,24 @@
   background-color: white;
 }
 
+.champ_label{
+  position: relative;
+}
+
 input {
   width: 220px;
   border-radius: 5px;
   background-color: #ffffff;
   border: solid 1px #000000;
   padding: 8px 12px;
+}
+
+.search_btn {
+  position: absolute;
+  width: auto;
+  height:100%;
+  right:12px;
+  bottom:-2px;
 }
 
 ul {

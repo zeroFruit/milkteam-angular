@@ -2,6 +2,7 @@ import { Injectable, Inject } from "@angular/core";
 import { OPAQUE_TOKEN } from '../app.config';
 import { Video } from "../modal/video.model";
 import { Headers, RequestOptions, Http } from "@angular/http";
+declare var $: any;
 
 @Injectable()
 export class UploadService {
@@ -30,4 +31,11 @@ export class UploadService {
         console.log(response.json());
       });
   }
+
+  
 }
+
+// $(".title_input").change(){
+//   var txt= $('.title_input').text();
+//   alert(txt);
+// };

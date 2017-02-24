@@ -25,7 +25,7 @@ import { FindPwComponent } from "./auth/find-pw/find-pw.component";
 import { UploadComponent } from './upload/upload.component';
 import { ChampionComponent } from './champion/champion.component';
 import { MypageComponent } from './mypage/mypage.component';
-
+import { HistoryComponent } from './history/./history.component';
 
 // Import Services
 import { APP_CONFIG, OPAQUE_TOKEN } from './app.config';
@@ -70,6 +70,9 @@ import { UploadService } from "./upload/upload.service";
       }, {
         path     : 'mypage',
         component: MypageComponent
+      }, {
+        path     : 'history',
+        component: HistoryComponent
       }
     ])
   ],
@@ -100,7 +103,9 @@ import { UploadService } from "./upload/upload.service";
     JoinComponent,
     FindPwComponent,
     //Upload
-    UploadComponent
+    UploadComponent,
+    // History
+    HistoryComponent
   ],
   exports     : [
     AppComponent,

@@ -274,6 +274,7 @@ input:checked + .slider + .text:before {
   left:0;
   top:0px;
   z-index: 1;
+  cursor: pointer;
 }
 
 
