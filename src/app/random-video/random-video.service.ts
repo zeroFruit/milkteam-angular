@@ -19,7 +19,7 @@ export class RandomVideoService {
     let options = {
       path: '/api/socket/main'
     }
-    let SOCKET_URL = "http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002/";
+    let SOCKET_URL = "http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3000";
     this.socket = io.connect(SOCKET_URL, options);
 
     this.socket.on('newMessage', (data) => {
@@ -45,7 +45,7 @@ export class RandomVideoService {
         token: localStorage.getItem('tokens')
       }
     };
-    this.socket.emit('join', params);
+    console.log(this.socket.emit('join', params));
   }
 
   chat(message: string) {
@@ -53,7 +53,7 @@ export class RandomVideoService {
     let params = {
       text: message
     };
-    this.socket.emit('createMessage', params);
+    console.log(this.socket.emit('createMessage', params));
   }
 
   /* Video

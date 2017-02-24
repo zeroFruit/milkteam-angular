@@ -6,7 +6,7 @@
         <img class="text_logo" src="/public/images/logo-text.png" alt="" routerLink="/"/>
       </h1>
 
-      <div class="video_switch" *ngIf="router.url === '/battle' || router.url === '/'">
+      <div class="video_switch" *ngIf="router.url === '/battle' || router.url === '/' || router.url === '/main'">
         <div class="fake_swtich" (click)="switchVideo(router.url)">
 
         </div>

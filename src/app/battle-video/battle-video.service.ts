@@ -22,7 +22,7 @@ export class BattleVideoService {
    -----------------------*/
   initSocket() {
     let options = {
-      path: this.appConfig.socketPath
+      path: '/api/socket/sub'
     }
     let SOCKET_URL = this.appConfig.socketEndpoint;
     this.socket = io.connect(SOCKET_URL, options);

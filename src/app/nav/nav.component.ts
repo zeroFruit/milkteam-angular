@@ -11,20 +11,20 @@ export class NavComponent {
   selected: string;
   dropDown: Boolean = true;
 
-  isBattle: boolean = true;
+  isBattle: boolean = false;
 
   constructor(
     private router: Router,
     private authService: AuthService
     ) {
-      if(router.url === '/') {
-        this.isBattle = false;
+      if(router.url === '/battle') {
+        this.isBattle = true;
       }
-      console.log(this.authService.user);
   }
 
   onSelected(position) {
     this.selected = position;
+    console.log(this.isBattle);
   }
 
   dropSelect() {
