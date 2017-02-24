@@ -28,6 +28,7 @@ import { MypageComponent } from './mypage/mypage.component';
 import { HistoryComponent } from './history/./history.component';
 
 // Import Services
+import { APP_CONFIG, OPAQUE_TOKEN } from './app.config';
 import { RandomVideoService } from "./random-video/random-video.service";
 import { AuthService } from "./auth/auth.service";
 
@@ -76,6 +77,7 @@ import { UploadService } from "./upload/upload.service";
     ])
   ],
   providers   : [
+    {provide: OPAQUE_TOKEN, useValue: APP_CONFIG},
     RandomVideoService,
     AuthService,
     UploadService

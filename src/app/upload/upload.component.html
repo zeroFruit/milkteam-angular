@@ -19,17 +19,17 @@
           <span>(영상의 주인공이 되는 챔프를 선택해주세요)</span>
         </div>
         <div class="br br2">
-          <champion></champion>
+          <champion (getChampionChange)="onChampionChange($event)"></champion>
           <!-- 이부분 수정 필요 -->
           <!-- <input type="text" placeholder="챔프를 입력하세요." [(ngModel)]="video.champion"> -->
         </div>
       </div>
       <div class="video_title">
         <div class="br br1">
-          <h2>제목</h2><span>(0/20)</span>
+          <h2>제목</h2><span>(<span class="text_length">20</span>/20)</span>
         </div>
         <div class="br br2">
-          <input type="text"  placeholder="제목은 20자 이내로 작성해주세요." [(ngModel)]="video.title"/>
+          <input class="title_input" type="text"  placeholder="제목은 20자 이내로 작성해주세요." [(ngModel)]="video.title"/>
         </div>
       </div>
       <div class="video_content">
@@ -54,15 +54,15 @@
         </div>
         <div class="br br2">
           <div class="pos_wrap">
-            <input name="position" type='radio' id='top' [(ngModel)]="video.position"/>
+            <input name="position" type='radio' id='top' [(ngModel)]="video.position" value="top"/>
             <label for='top'><span></span>탑</label>
-            <input name="position" type='radio' id='mid' [(ngModel)]="video.position"/>
+            <input name="position" type='radio' id='mid' [(ngModel)]="video.position" value="mid"/>
             <label for='mid'><span></span>미드</label>
-            <input name="position" type='radio' id='deal' [(ngModel)]="video.position"/>
+            <input name="position" type='radio' id='deal' [(ngModel)]="video.position" value="deal"/>
             <label for='deal'><span></span>원딜</label>
-            <input name="position" type='radio' id='sup' [(ngModel)]="video.position"/>
+            <input name="position" type='radio' id='sup' [(ngModel)]="video.position" value="sup"/>
             <label for='sup'><span></span>서폿</label>
-            <input name="position" type='radio' id='jun' [(ngModel)]="video.position"/>
+            <input name="position" type='radio' id='jun' [(ngModel)]="video.position" value="jun"/>
             <label for='jun'><span></span>정글</label>
           </div>
         </div>
@@ -89,9 +89,9 @@
           <h2>특성</h2>
         </div>
         <div class="br br2">
-          <input name="type" type='radio' id='ap' [(ngModel)]="video.attribute"/>
+          <input name="type" type='radio' id='ap' [(ngModel)]="video.attribute" value="ap"/>
           <label for='ap'><span></span>AP</label>
-          <input name="type" type='radio' id='ad' [(ngModel)]="video.attribute"/>
+          <input name="type" type='radio' id='ad' [(ngModel)]="video.attribute" value="ad"/>
           <label for='ad'><span></span>AD</label>
         </div>
       </div>

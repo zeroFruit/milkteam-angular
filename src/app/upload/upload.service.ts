@@ -1,10 +1,15 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
+import { OPAQUE_TOKEN } from '../app.config';
 import { Video } from "../modal/video.model";
 import { Headers, RequestOptions, Http } from "@angular/http";
+declare var $: any;
 
 @Injectable()
 export class UploadService {
-  constructor(private http: Http) {
+  constructor(
+    @Inject(OPAQUE_TOKEN) public appConfig: any,
+    private http: Http
+    ) {
   }
 
   upload(video: Video) {
@@ -20,10 +25,15 @@ export class UploadService {
     });
 
     const options = new RequestOptions({headers: headers});
-    this.http.post('http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002/video', body, options).toPromise()
+    this.http.post(`${this.appConfig.apiEndpoint}/video`, body, options).toPromise()
       .then(response => {
         response.json();
         console.log(response.json());
       });
   }
 }
+
+// $(".title_input").change(){
+//   var txt= $('.title_input').text();
+//   alert(txt);
+// };

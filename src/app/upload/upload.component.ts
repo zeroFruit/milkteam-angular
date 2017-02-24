@@ -16,14 +16,22 @@ export class UploadComponent {
 
   constructor(private uploadService: UploadService) {
     this.video = new Video();
+    this.video.position = 'top';
+    this.video.attribute = 'ap';
+    this.video.type = 'mad';
   }
 
   toggleBtn(type) {
     this.video.type = type;
   }
 
+  onChampionChange(newValue) {
+    this.video.champion = newValue;
+  }
+
   upload() {
     if(!this.video.isSetForUpload()) {
+      console.log(this.video);
       alert("빈 항목이 있습니다.");
       return;
     }

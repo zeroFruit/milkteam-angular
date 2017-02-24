@@ -1,4 +1,5 @@
-import { Injectable, EventEmitter } from "@angular/core";
+import { Injectable, Inject, EventEmitter } from "@angular/core";
+import { OPAQUE_TOKEN } from '../app.config';
 import io from 'socket.io-client';
 
 @Injectable()
@@ -6,7 +7,9 @@ export class BattleVideoService {
   socket;
   listener: EventEmitter<any> = new EventEmitter();
 
-  constructor() {
+  constructor(
+    @Inject(OPAQUE_TOKEN) public appConfig: any
+  ) {
     this.initSocket();
   }
 
@@ -14,9 +17,9 @@ export class BattleVideoService {
    -----------------------*/
   initSocket() {
     let options = {
-      path: '/api/socket/battle'
+      path: this.appConfig.socketPath
     }
-    let SOCKET_URL = "http://ec2-52-78-175-43.ap-northeast-2.compute.amazonaws.com:3000";
+    let SOCKET_URL = this.appConfig.socketEndpoint;
     this.socket = io.connect(SOCKET_URL, options);
 
     this.socket.on('newMessage', (data) => {
