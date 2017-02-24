@@ -26,6 +26,7 @@
 
 .header_left > .video_switch {
   margin-left: 40px;
+  position: relative;
 }
 
 .logo {
@@ -138,6 +139,19 @@
 
 .drop_up {
   background-image: url(/public/images/drop-up.png);
+}
+
+.login_nav{
+  display: flex;
+  align-items: center;
+}
+
+.login_nav > span {
+  margin-left:20.5px;
+}
+
+.login_nav > img {
+  margin-left:12px;
 }
 
 /* switch */
@@ -253,6 +267,17 @@ input:checked + .slider + .text:before {
   opacity: 0.4;
 }
 
+.fake_swtich {
+  position: absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0px;
+  z-index: 1;
+}
+
+
+
 
 //  dropdown
 .header_right{
@@ -350,6 +375,10 @@ input:checked + .slider + .text:before {
   line-height: 0.92;
   letter-spacing: normal;
   color: #a4a4a4;
+}
+
+.is_battle{
+
 }
 // =======
 // .logo-text {

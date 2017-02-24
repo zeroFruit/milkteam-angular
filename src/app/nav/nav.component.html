@@ -5,11 +5,17 @@
         <img src="/public/images/logo-image.png" alt="Legend TV" routerLink="/"/>
         <img class="text_logo" src="/public/images/logo-text.png" alt="" routerLink="/"/>
       </h1>
-      <div class="video_switch" *ngIf="router.url === '/battle' || router.url === '/'" >
+
+      <div class="video_switch" *ngIf="router.url === '/battle' || router.url === '/'">
+        <div class="fake_swtich" (click)="switchVideo(router.url)">
+
+        </div>
         <label class="switch">
-          <input type="checkbox" [attr.checked]="isBattle">
-          <div class="slider round">
+          <div class="switch_fake">
           </div>
+          <input type="checkbox" [(ngModel)]="isBattle">
+            <div class="slider round">
+            </div>
           <div class="text"></div>
         </label>
       </div>
@@ -25,13 +31,17 @@
     </div>
     <div class="header_ele header_right">
       <ul class="user_control">
-        <li class="upload"><img src="/public/images/button-upload.png" alt="upload" routerLink="/upload"/></li>
+        <li class="upload"><img src="/public/images/button-upload.png" alt="upload" routerLink="/upload" *ngIf="isLogin"/></li>
         <li class="setting"><img src="/public/images/combined-shape.png" alt="setting" routerLink="/filter"/></li>
-        <li class="nickname" (click)="dropSelect()">Junghyun Park</li>
-        <li class="profile" (click)="dropSelect()"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
-        <li class="drop" (click)="dropSelect()">
+        <li class="nickname" (click)="dropSelect()" *ngIf="isLogin">Junghyun Park</li>
+        <li class="profile" (click)="dropSelect()" *ngIf="isLogin"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
+        <li class="drop" (click)="dropSelect()" *ngIf="isLogin">
           <div class="drop_img" [class.drop_down]="dropDown"  [class.drop_up]="!dropDown">
           </div>
+        </li>
+        <li class="login_nav" *ngIf="!isLogin" routerLink="/auth">
+          <span>Login</span>
+          <img src="/public/images/lock-icon.png" alt="Login Button">
         </li>
       </ul>
 
