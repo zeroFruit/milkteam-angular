@@ -64,11 +64,17 @@ export class BattleVideoService {
     this.socket.emit('join', params);
   }
 
-  chat(message: string) {
+  chat(event: Object) {
+    let message = event[0];
+    let side = event[1];
     let params = {
       text: message
     };
-    this.socket.emit('lCreateMessage', params);
+    if(side == 'left')
+      this.socket.emit('lCreateMessage', params);
+    else if(side == 'right')
+      this.socket.emit('rCreateMessage', params);
+
   }
 
   /* Video

@@ -1,7 +1,8 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter, Inject } from '@angular/core';
 import { Http } from "@angular/http";
 import io from 'socket.io-client';
 import { Video } from "../modal/video.model";
+import { OPAQUE_TOKEN } from "../app.config";
 
 @Injectable()
 export class RandomVideoService {
@@ -9,7 +10,8 @@ export class RandomVideoService {
   socket;
   listener: EventEmitter<any> = new EventEmitter();
 
-  constructor() {
+  constructor(@Inject(OPAQUE_TOKEN) public appConfig: any,
+              private http: Http) {
     this.initSocket();
   }
 
@@ -19,17 +21,17 @@ export class RandomVideoService {
     let options = {
       path: '/api/socket/main'
     }
-    let SOCKET_URL = "http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3000";
+    let SOCKET_URL = this.appConfig.socketEndpoint;
     this.socket = io.connect(SOCKET_URL, options);
 
     this.socket.on('newMessage', (data) => {
       console.log('newMessage', data);
       this.listener.emit({
-        'date': data.date,
+        'date'       : data.date,
         'displayName': data.displayName,
-        'msg': data.msg,
-        'from': data.from,
-        'picture': data.picture
+        'msg'        : data.msg,
+        'from'       : data.from,
+        'picture'    : data.picture
       });
     });
   }
@@ -58,10 +60,9 @@ export class RandomVideoService {
 
   /* Video
    -----------------------*/
-  getVideo(): Video {
-    // return this.http.get('url').toPromise().then(response => {
-    //   return response.json().data;
-    // });
-    return this.video;
+  getVideo(): Promise<any> {
+    return this.http.get(this.appConfig.apiEndpoint+'/video/main').toPromise().then(response => {
+      return response.json().data;
+    });
   }
 }

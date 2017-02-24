@@ -42,7 +42,7 @@ export class BattleVideoComponent {
 
   }
 
-  chatClicked(message: string) {
-    this.battleVideoService.chat(message);
+  chatClicked(event: Object) {
+    this.battleVideoService.chat(event);
   }
 }

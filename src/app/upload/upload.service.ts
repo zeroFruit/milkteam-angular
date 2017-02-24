@@ -16,11 +16,11 @@ export class UploadService {
     if(video.videoId == '') {
       console.log('need parse video id from url');
     }
-    const body = JSON.stringify(video);
+    const body = JSON.stringify({video: video});
     const headers = new Headers({
       'Content-Type': 'application/json',
       'Access-Control-Expose-Headers': 'x-auth',
-      'x-auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGFiYzhiZjViNTNkMDNmZTllMzRiMTgiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNDg3Nzc0NzMxfQ.k5z0_jK8DCAhmOErlM5U2hQE1PmqKeL4r322u7Ej1As'
+      'x-auth': localStorage.getItem('tokens')
     });
 
     const options = new RequestOptions({headers: headers});

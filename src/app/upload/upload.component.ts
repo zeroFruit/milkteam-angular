@@ -19,6 +19,7 @@ export class UploadComponent {
     this.video.position = 'top';
     this.video.attribute = 'ap';
     this.video.type = 'mad';
+    this.video.videoId = 'axAt9qPv8Jg';
   }
 
   toggleBtn(type) {

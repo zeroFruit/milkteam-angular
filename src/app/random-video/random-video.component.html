@@ -1,10 +1,10 @@
 <div class="container">
-  <lol-video [videoId]="video.videoId"
+  <lol-video [videoId]="videoId"
              [black_gradient]="true"
              (video_status)="videoStatusChange(status)"
   ></lol-video>
   <random-chatting [chattings]="chattings"
                    (chatClicked)="chatClicked($event)"
   ></random-chatting>
-  <random-info></random-info>
+  <random-info [videos]="videos"></random-info>
 </div>
