@@ -31,6 +31,8 @@ export class UploadService {
         console.log(response.json());
       });
   }
+
+  
 }
 
 // $(".title_input").change(){
