@@ -32,7 +32,10 @@
         <li class="upload"><img src="/public/images/button-upload.png" alt="upload" routerLink="/upload" *ngIf="authService.user"/></li>
         <li class="setting"><img src="/public/images/combined-shape.png" alt="setting" routerLink="/filter"/></li>
         <li class="nickname" (click)="dropSelect()" *ngIf="authService.user">{{authService.user.displayName}}</li>
-        <li class="profile" (click)="dropSelect()" *ngIf="authService.user"><img src="/public/images/bitmap.png" alt="profile picture" /></li>
+        <li class="profile" (click)="dropSelect()" *ngIf="authService.user">
+          <img src="/public/images/bitmap.png" alt="profile picture" *ngIf="!authService.user || !authService.user.profile"/>
+          <img [src]="authService.user.profile" alt="my profile picture" *ngIf="authService.user && authService.user.profile">
+        </li>
         <li class="drop" (click)="dropSelect()" *ngIf="authService.user">
           <div class="drop_img" [class.drop_down]="dropDown"  [class.drop_up]="!dropDown">
           </div>

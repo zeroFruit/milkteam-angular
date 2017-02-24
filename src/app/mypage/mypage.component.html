@@ -47,193 +47,29 @@
       <div class="videos_wrap">
           <div class="scrollbar style-1">
             <div class="force-overflow">
-              <div class="card_row">
-                <div class="video_card">
-                  <div class="preview">
+              <div class="card_row" *ngIf="videos">
+                <div class="video_card" *ngFor="let video of videos">
+                  <div class="preview" [ngStyle]="{'background-image': 'url(' + video.thumbnail + ')'}">
                   </div>
                   <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
+                    <span>{{video.title}}</span>
                     <img src="/public/images/pen-icon.png" alt="수정하기">
                   </div>
                   <div class="viewlike">
                     <div class="total view">
                       <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
+                      <span>{{video.viewed}}</span>
                     </div>
                     <div class="total like">
                       <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
+                      <span>{{video.likes}}</span>
                     </div>
                   </div>
-                  <div class="sticker blue">
+                  <div class="sticker blue" *ngIf="false">
                     <img src="/public/images/blue-icon.png" alt="">
                   </div>
                 </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                  <div class="sticker red">
-                    <img src="/public/images/red-icon.png" alt="">
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="video_card">
-                  <div class="preview">
-                  </div>
-                  <div class="title">
-                    <span>자이라 핫캐리 레전드...</span>
-                    <img src="/public/images/pen-icon.png" alt="수정하기">
-                  </div>
-                  <div class="viewlike">
-                    <div class="total view">
-                      <img src="/public/images/view-icon.png" alt="">
-                      <span>3298</span>
-                    </div>
-                    <div class="total like">
-                      <img src="/public/images/like-icon.png" alt="">
-                      <span>1216</span>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
