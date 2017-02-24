@@ -10,13 +10,11 @@ export let OPAQUE_TOKEN = new OpaqueToken('app.config');
 export interface AppConfig {
   apiEndpoint: String;
   socketEndpoint: String;
-  socketPath: String;
 };
 
 export const APP_CONFIG: AppConfig = {
   apiEndpoint: 'http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3000',
-  socketEndpoint: 'http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3002',
-  socketPath: '/api/socket/sub'
+  socketEndpoint: 'http://ec2-52-79-203-90.ap-northeast-2.compute.amazonaws.com:3000'
 };
 
 export let OpaqueTokenProvider = {

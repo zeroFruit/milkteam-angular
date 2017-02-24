@@ -22,7 +22,7 @@ export class BattleVideoService {
    -----------------------*/
   initSocket() {
     let options = {
-      path: this.appConfig.socketPath
+      path: '/api/socket/sub'
     }
     let SOCKET_URL = this.appConfig.socketEndpoint;
     this.socket = io.connect(SOCKET_URL, options);
@@ -64,11 +64,17 @@ export class BattleVideoService {
     this.socket.emit('join', params);
   }
 
-  chat(message: string) {
+  chat(event: Object) {
+    let message = event[0];
+    let side = event[1];
     let params = {
       text: message
     };
-    this.socket.emit('lCreateMessage', params);
+    if(side == 'left')
+      this.socket.emit('lCreateMessage', params);
+    else if(side == 'right')
+      this.socket.emit('rCreateMessage', params);
+
   }
 
   /* Video

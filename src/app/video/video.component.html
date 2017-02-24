@@ -1,6 +1,7 @@
 <div class="wrapper-player">
   <div class="wrapper-youtube">
     <youtube-player
+      *ngIf="videoId"
       [videoId]="videoId"
       (ready)="initPlayer($event)"
       (change)="onStateChange($event)"

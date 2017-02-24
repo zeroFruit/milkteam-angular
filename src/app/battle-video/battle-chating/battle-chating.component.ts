@@ -8,8 +8,8 @@ import { BattleChatting } from "../../modal/battle-chatting.model";
 })
 export class BattleChatingComponent {
   @Input() chattings: BattleChatting[];
-  @Output() chatClicked = new EventEmitter<string>();
-  leftChamp: Boolean = true;
+  @Output() chatClicked = new EventEmitter<Object>();
+  leftChamp: Boolean = true; // left = true, right = false
 
 
   champSwitch(boolCheck) {
@@ -20,7 +20,8 @@ export class BattleChatingComponent {
 
   onChat(message) {
     console.log(message.value);
-    this.chatClicked.emit(message.value);
+    let side: string = this.leftChamp ? 'left' : 'right';
+    this.chatClicked.emit([message.value, side]);
     message.value = '';
   }
 }

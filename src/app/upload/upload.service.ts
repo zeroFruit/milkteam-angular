@@ -15,13 +15,14 @@ export class UploadService {
   /**
    * 비디오 등록 함수
    */
-  upload(video: Video): Promise<Object> {
-    let token;
-    token = localStorage.getItem('tokens');
-    const body = JSON.stringify(video);
+  upload(video: Video) {
+    if(video.videoId == '') {
+      console.log('need parse video id from url');
+    }
+    const body = JSON.stringify({video: video});
     const headers = new Headers({
       'Content-Type': 'application/json',
-      'x-auth': token
+      'x-auth': localStorage.getItem('tokens')
     });
 
     const options = new RequestOptions({headers: headers});

@@ -9,6 +9,8 @@ export class Video {
   position: string;
   tier: string;
   attribute: string;
+  owner: string;
+  duration: string;
   tag: string;
   when: string;
 

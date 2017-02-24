@@ -14,23 +14,24 @@ import { RandomVideoService } from "./random-video.service";
 })
 export class RandomVideoComponent implements OnInit {
   chattings: RandomChatting[] = [];
-  video: Video;
-  //videoId = "GPexqi3flNM";
+  videos: Video[];
+  videoId: string;
 
   constructor(private randomVideoService: RandomVideoService) {
-    this.randomVideoService.joinRandomChatting('GPexqi3flNM');
+    this.randomVideoService.joinRandomChatting(this.videoId);
     this.randomVideoService.getEventListener().subscribe(event => {
         event.picture = "/public/images/bitmap.png";
         this.chattings.unshift(event);
     });
+
+    this.randomVideoService.getVideo().then(video => {
+      this.videos = video.videos;
+      this.videoId = this.videos[0].videoId;
+    });
   }
 
   ngOnInit() {
-    // this.randomVideoService.getVideo().then(video => {
-    //   this.video = video;
-    // });
-    this.video = this.randomVideoService.getVideo();
-    console.log(this.video);
+    //this.video = this.randomVideoService.getVideo();
   }
 
   videoStatusChange(status) {

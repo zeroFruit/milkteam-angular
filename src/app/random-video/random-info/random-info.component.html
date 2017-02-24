@@ -1,12 +1,12 @@
-<div class="random-info">
+<div class="random-info" *ngIf="videos">
   <div class="video-info">
     <div class="video-tag">
       <div class="tag new">new</div>
       <div class="tag best">best</div>
       <div class="tag hit">hit</div>
     </div>
-    <div class="video-title">자이라 37데스하는 데드무비입니다</div>
-    <div class="video-desc">제 상대편 자이라(오멩이)가 진짜 심각하게 못해서 제가 따라다니면서 계속 죽였던 영상입니다. 제가 영상속 미포입니다.</div>
+    <div class="video-title">{{ videos[0].title }}</div>
+    <div class="video-desc">{{ videos[0].desc }}</div>
     <div class="video-share">
       <div class="btn-share btn-share-fb">f</div>
       <div class="btn-share btn-share-twitter">t</div>
@@ -15,13 +15,12 @@
   </div>
   <div class="btn-next-video">
   <div class="next-text">NEXT</div>
-  <div class="next-thumb">
-    <div class="img"></div>
-    <!--<img src="#" alt="">실제이미지로 대체해야됨-->
+  <div class="next-thumb" (click)="nextVideo()">
+    <img class="img-thumb" src="https://i1.ytimg.com/vi/{{ videos[1].videoId }}/hqdefault.jpg" alt="다음 영상">
     <div class="icon-play">&gt;</div>
     <div class="mask"></div>
   </div>
-  <div class="next-title">자이라 데드무비</div>
-  <div class="next-time">49s</div>
+  <div class="next-title">{{ videos[1].title }}</div>
+  <div class="next-time">{{ videos[1].duration }}</div>
 </div>
 </div>
