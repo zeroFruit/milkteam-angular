@@ -14,9 +14,9 @@ export class RandomChattingComponent {
   @Input() chattings: RandomChatting[];
   @Output() chatClicked = new EventEmitter<string>();
 
-  onChat(message: string){
-    console.log(message);
-    this.chatClicked.emit(message);
+  onChat(message: any){
+    this.chatClicked.emit(message.value);
+    message.value = '';
     //console.log(this.chattings);
     //this.chattings.push(new RandomChatting('Angular', message, '#'));
   }

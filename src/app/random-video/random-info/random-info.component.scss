@@ -4,16 +4,22 @@
   z-index: 150;
   top: 0;
   right: 0;
-  margin-top: 100px;
+  margin-top: 9%;
   width: 25%;
+  padding-right: 25px;
 
   .video-info {
     .video-tag {
+      padding-bottom: 3px;
       .tag {
         display: inline-block;
         border-radius: 15px;
         width: 30px;
         color: #ffffff;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+        padding: 2px 5px;
       }
       .new {background-color: #4369ff;}
       .best {background-color: #8444ff;}
@@ -22,6 +28,7 @@
     .video-title {
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       text-align: right;
+      padding: 12px 0;
       color: #ffffff;
     }
     .video-desc {
@@ -31,27 +38,34 @@
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       font-size: 12px;
     }
-    .btn-share {
-      display: inline-block;
-      background-color: #4369ff;
-      color: #ffffff;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      border-radius: 20px;
+    .video-share {
+      margin: 35px 0;
+
+      .btn-share {
+        display: inline-block;
+        background-color: #4369ff;
+        color: #ffffff;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 20px;
+      }
     }
   }
   .btn-next-video {
+    margin-top: 70px;
     .next-text {
       color: #ffffff;
       font-size: 20px;
       font-weight: bold;
+      padding-bottom: 5px;
     }
     .next-thumb {
       position: relative;
       width: 150px;
       height: 70px;
       margin-left: auto;
+      margin-bottom: 10px;
       .img{
         width: 150px;
         height: 70px;background: #b92335;}
@@ -77,9 +91,12 @@
     }
     .next-title {
       color: #ffffff;
+      padding-bottom: 5px;
+      font-weight: 100;
     }
     .next-time {
       color: #ffffff;
+      font-weight: 100;
     }
   }
 }

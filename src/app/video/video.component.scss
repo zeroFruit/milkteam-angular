@@ -30,9 +30,9 @@
   .wrapper-progress-bar {
     cursor: pointer;
     height: 8px;
-    padding: 8px 0;
+    padding: 0;
     position: absolute;
-    width: 80%;
+    width: 50%;
     left: 0;
     right: 0;
     bottom: 6%;
@@ -60,7 +60,7 @@
         border: 3px solid white;
         border-radius: 50%;
         height: 12px;
-        margin: -5px -8px 0 0;
+        margin: -2px -4px 0 0;
         position: absolute;
         right: 0;
         width: 12px;

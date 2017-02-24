@@ -1,26 +1,33 @@
 <header class="header">
-    <div class="header_ele header_left">
-      <h1 class="logo"><img src="/public/images/logo-image.png" alt="Legend TV"/><img src="/public/images/logo-text.png" alt=""/></h1>
-      <div class="video_switch">
+  <div class="header_ele header_left">
+    <h1 class="logo">
+      <img src="/public/images/logo-image.png" alt="Legend TV"
+           (click)="goPage('/')"/>
+      <img src="/public/images/logo-text.png" class="logo-text" alt=""
+           (click)="goPage('/')"/>
+    </h1>
+    <div class="video_switch">
 
-      </div>
     </div>
-    <div class="header_ele header_cen">
-      <ul class="position_list">
-        <li><img src="/public/images/button-top-off.png" alt="top"></li>
-        <li><img src="/public/images/button-jungle-off.png" alt="jungle"></li>
-        <li><img src="/public/images/button-mid-off.png" alt="mid"></li>
-        <li><img src="/public/images/button-sup-off.png" alt="support"></li>
-        <li><img src="/public/images/button-ad-off.png" alt="ad"></li>
-      </ul>
-    </div>
-    <div class="header_ele header_right">
-      <ul class="user_control">
-        <li><img src="/public/images/button-upload.png" alt="upload" /></li>
-        <li><img src="/public/images/combined-shape.png" alt="setting" /></li>
-        <li>Junghyun Park</li>
-        <li><img src="/public/images/bitmap.png" alt="profile picture" /></li>
-        <li><img src="/public/images/button-profile.png" alt="drop down" /></li>
-      </ul>
-    </div>
+  </div>
+  <div class="header_ele header_cen"
+       *ngIf="router.url === '/battle'">
+    <ul class="position_list">
+      <li><img src="/public/images/button-top-off.png" alt="top"></li>
+      <li><img src="/public/images/button-jungle-off.png" alt="jungle"></li>
+      <li><img src="/public/images/button-mid-off.png" alt="mid"></li>
+      <li><img src="/public/images/button-sup-off.png" alt="support"></li>
+      <li><img src="/public/images/button-ad-off.png" alt="ad"></li>
+    </ul>
+  </div>
+  <div class="header_ele header_right">
+    <ul class="user_control">
+      <li><img src="/public/images/button-upload.png" alt="upload" class="btn-upload"
+               (click)="goPage('/upload')"/></li>
+      <li><img src="/public/images/combined-shape.png" alt="setting" class="btn-setting"/></li>
+      <li><span class="text-displayName">Junghyun Park</span></li>
+      <li><img src="/public/images/bitmap.png" alt="profile picture" class="profile-pic"/></li>
+      <li><img src="/public/images/button-profile.png" alt="drop down" class="btn-dropdown"/></li>
+    </ul>
+  </div>
 </header>
