@@ -96,10 +96,8 @@ export class AuthService {
    * @author 김진혁
    */
   getUserInfo () {
-    console.log('start getUserInfo');
     let token;
     token = this.getToken();
-    console.log(token);
     if (token) {
       let headers = new Headers({'Content-Type': 'application/json', 'x-auth': token});
       let options = new RequestOptions({headers: headers});
@@ -115,6 +113,68 @@ export class AuthService {
           console.log('no tokens');
         })
 
+    }
+  }
+
+  /**
+   * 닉네임 변경 함수
+   * @date 2017-02-24
+   * @author 김진혁
+   */
+  updateDisplayName (displayName) {
+    let token;
+    token = this.getToken();
+    if (token) {
+      let headers = new Headers({'Content-Type': 'application/json', 'x-auth': token});
+      let options = new RequestOptions({headers: headers});
+      let data = { displayName };
+      this.http.put(`${this.appConfig.apiEndpoint}}/users/displayName`, data, options)
+        .toPromise()
+        .then(response => response.json());
+    }
+  }
+
+  /**
+   * 프로필 사진 등록/변경함수
+   * @date 2017-02-24
+   * @author 김진혁
+   */
+  updateProfile (profile) {
+    let token;
+    token = this.getToken();
+    if (token) {
+      let headers = new Headers({
+        'x-auth': token
+      });
+
+      // form data for file upload
+      let options = new RequestOptions({headers: headers});
+      let formData: FormData = new FormData();
+      formData.append('profile', profile, profile.name);
+      this.http.post(`${this.appConfig.apiEndpoint}/users/profile`, formData, options)
+        .toPromise()
+        .then(response => response.json()); 
+    }
+  }
+
+  /**
+   * 본인의 영상 얻기
+   * @date 2017-02-24
+   * @author 김진혁
+   */
+  getVideo (): Promise<Object[]> {
+    let token;
+    token = this.getToken();
+    if (token) {
+      let headers = new Headers({'Content-Type': 'application/json', 'x-auth': token});
+      let options = new RequestOptions({headers: headers});
+      return this.http.get(`${this.appConfig.apiEndpoint}/video`, options)
+        .toPromise()
+        .then(response => {
+          if (response.json().code == 24) {
+            return response.json().data;
+          }
+        })
     }
   }
 

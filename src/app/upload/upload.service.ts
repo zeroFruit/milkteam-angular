@@ -12,24 +12,21 @@ export class UploadService {
     ) {
   }
 
-  upload(video: Video) {
-    console.log("try upload video");
-    if(video.videoId == '') {
-      console.log('need parse video id from url');
-    }
+  /**
+   * 비디오 등록 함수
+   */
+  upload(video: Video): Promise<Object> {
+    let token;
+    token = localStorage.getItem('tokens');
     const body = JSON.stringify(video);
     const headers = new Headers({
       'Content-Type': 'application/json',
-      'Access-Control-Expose-Headers': 'x-auth',
-      'x-auth': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGFiYzhiZjViNTNkMDNmZTllMzRiMTgiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNDg3Nzc0NzMxfQ.k5z0_jK8DCAhmOErlM5U2hQE1PmqKeL4r322u7Ej1As'
+      'x-auth': token
     });
 
     const options = new RequestOptions({headers: headers});
-    this.http.post(`${this.appConfig.apiEndpoint}/video`, body, options).toPromise()
-      .then(response => {
-        response.json();
-        console.log(response.json());
-      });
+    return this.http.post(`${this.appConfig.apiEndpoint}/video`, body, options).toPromise()
+      .then(response => response.json());
   }
 
   

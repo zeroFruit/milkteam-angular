@@ -8,22 +8,23 @@
       <div class="pa_wrap_2">
         <div class="nick_change">
           <span>닉네임 변경</span>
-          <input type="text" placeholder="닉네임 입력">
+          <input type="text" placeholder="닉네임 입력" [(ngModel)]="displayName" >
         </div>
         <div class="profile_text">
           <span>프로필 사진</span>
         </div>
         <div class="profile_input">
           <div class="profile_pic">
-            <img src="/public/images/bitmap2.png" alt="my profile picture">
+            <img src="/public/images/bitmap2.png" alt="my profile picture" *ngIf="!authService.user || !authService.user.profile">
+            <img [src]="authService.user.profile" alt="my profile picture" *ngIf="authService.user && authService.user.profile">
           </div>
           <div class="profile_search">
               <label class="search_btn" for="ex_filename"><span>파일찾기</span></label>
-              <input type="file" id="ex_filename" class="upload-hidden">
+              <input type="file" id="ex_filename" class="upload-hidden" (change)="getFiles($event)">
               <input class="file_address" value="파일선택" disabled="disabled">
           </div>
         </div>
-        <button class="save_btn">
+        <button class="save_btn" (click)="onSave()">
           <span>변경 내용 저장</span>
         </button>
       </div>
