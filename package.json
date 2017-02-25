@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 7777",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build:aot": "rimraf dist && webpack --config config/webpack.aot.js --progress --profile"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,9 @@
     "zone.js": "*"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "^2.4.7",
+    "@angular/platform-server": "^2.4.7",
+    "@ngtools/webpack": "^1.2.9",
     "@types/jasmine": "^2.5.40",
     "@types/node": "^7.0.4",
     "@types/source-map": "^0.5.0",

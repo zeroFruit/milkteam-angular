@@ -6,9 +6,9 @@
     <section class="viewlike">
       <h2 class="hidden-title">조회수와 좋아요 수</h2>
       <img src="/public/images/button-view.png" class="button_view">
-      <span class="text_total view_total">VIEW 32312</span>
+      <span class="text_total view_total">VIEW {{battleInfo.views}}</span>
       <img src="/public/images/button-like.png" class="button_like">
-      <span class="text_total like_total">LIKE 4231</span>
+      <span class="text_total like_total">LIKE {{battleInfo.lLikes + battleInfo.rLikes}}</span>
     </section>
   </div>
 
@@ -30,15 +30,15 @@
         </div>
       </div>
       <div class="voting">
-        <img src="/public/images/button-heart.png" class="button_heart b1">
-        <span class="perNum pn1">67%</span>
+        <img src="/public/images/button-heart.png" class="button_heart b1" (click)="onLike(-1)">
+        <span class="perNum pn1">{{getPercentage(battleInfo.lLikes, battleInfo.rLikes)}}%</span>
         <div class="progress">
           <div class="meter">
-            <span style="width: 67%;"></span>
+            <span [ngStyle]="{'width': getPercentage(battleInfo.lLikes, battleInfo.rLikes)+'%'}"></span>
           </div>
         </div>
-        <span class="perNum pn2">33%</span>
-        <img src="/public/images/button-heart.png" class="button_heart b2">
+        <span class="perNum pn2">{{getPercentage(battleInfo.rLikes, battleInfo.lLikes)}}%</span>
+        <img src="/public/images/button-heart.png" class="button_heart b2"(click)="onLike(1)">
       </div>
 
       <div class="infos">

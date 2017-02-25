@@ -49,4 +49,27 @@ export class BattleVideoComponent {
   chatClicked(event: Object) {
     this.battleVideoService.chat(event);
   }
+
+  getPercentage(a: number, b:number): string {
+    if (b<=0 && a>0) return '100';
+    if (b<=0 || a==0) return '0';
+    let kda: number =  (a/(a+b))*100;
+    return kda.toFixed(0);
+  }
+
+  /**
+   * 좋아요
+   */
+  onLike (which: number) {
+    let lId = this.battleInfo.videos[0].videoId;
+    let rId = this.battleInfo.videos[1].videoId;
+    this.battleVideoService.likeMatch(lId, rId, which)
+      .then(response => {
+        if (response['code'] == 50) {
+          let data = response['data'];
+          this.battleInfo['lLikes'] = data['likes']['lLikes'];
+          this.battleInfo['rLikes'] = data['likes']['rLikes'];
+        }
+      })
+  }
 }

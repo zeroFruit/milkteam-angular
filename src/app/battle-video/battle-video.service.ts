@@ -1,8 +1,9 @@
 import { Injectable, Inject, EventEmitter } from "@angular/core";
 import { OPAQUE_TOKEN } from '../app.config';
+import { Router } from '@angular/router';
 import io from 'socket.io-client';
 import { Video } from "../modal/video.model";
-import { Http } from "@angular/http";
+import { Http, Headers, RequestOptions } from "@angular/http";
 
 @Injectable()
 export class BattleVideoService {
@@ -15,7 +16,8 @@ export class BattleVideoService {
 
   constructor(
     @Inject(OPAQUE_TOKEN) public appConfig: any,
-    private http: Http
+    private http: Http,
+    private router: Router
   ) {
     this.initSocket();
   }
@@ -85,5 +87,35 @@ export class BattleVideoService {
       return response.json().data[0];
     });
     //return this.videos;
+  }
+
+  /**
+   * 비디오 좋아요
+   * @date 2017-02-25
+   * @author 김진혁
+   */
+  likeMatch (lId: string, rId: string, which: number): Promise<Object> {
+    let token;
+    token = localStorage.getItem('tokens');
+    if (!token) {
+      alert('로그인이 필요합니다.');
+      this.router.navigate(['/auth']);
+      return;
+    }
+    let headers = new Headers({'Content-Type': 'application/json', 'x-auth': token});
+    let options = new RequestOptions({headers: headers});
+    let data = {
+      isLike: 1,
+      videos: {
+        lId: lId,
+        rId: rId,
+        which: which
+      }
+    };
+    return this.http.put(`${this.appConfig.apiEndpoint}/match/likes`, data, options)
+      .toPromise()
+      .then(response => {
+        return response.json();
+      });
   }
 }
