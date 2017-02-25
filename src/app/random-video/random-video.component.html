@@ -3,8 +3,11 @@
              [black_gradient]="true"
              (video_status)="videoStatusChange(status)"
   ></lol-video>
+  <img class="chat_btn" src="/public/images/chat-icon.png" alt="" *ngIf="!chatOn" (click)="chattingOn()"/>
   <random-chatting [chattings]="chattings"
                    (chatClicked)="chatClicked($event)"
+                   *ngIf = "chatOn"
+                   (chatOn)="chatOn = $event"
   ></random-chatting>
   <random-info [videos]="videos"></random-info>
 </div>
